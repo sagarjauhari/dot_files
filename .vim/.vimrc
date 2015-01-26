@@ -17,9 +17,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'wting/rust.vim'
+Plugin 'wincent/Command-T'
+Plugin 'airblade/vim-gitgutter'
 
 
 " All of your Plugins must be added before the following line
