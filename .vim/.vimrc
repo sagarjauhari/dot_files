@@ -421,3 +421,15 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
+"========================================
+" Experimental mappings
+"========================================
+
+" Open vimrc in a vertial split
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" Common typos
+:iabbrev adn and
+:iabbrev wordl world
+
+
