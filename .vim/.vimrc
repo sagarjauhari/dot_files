@@ -150,6 +150,9 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+" Default font
+set guifont=Menlo:h14
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -421,15 +424,39 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-"========================================
+"""""""""""""""""""""""""""""""""""""""""""""""
 " Experimental mappings
-"========================================
+"
+" Inspired by Learn Vimscript the Hard Way
+" http://learnvimscriptthehardway.stevelosh.com
+"""""""""""""""""""""""""""""""""""""""""""""""
 
 " Open vimrc in a vertial split
+"----------------------------------------
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " Common typos
+"----------------------------------------
 :iabbrev adn and
 :iabbrev wordl world
 
+" Text manipulation
+"----------------------------------------
+" Surround text with quotes
+:nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+:nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+" :vnoremap <leader>" `<i"<esc>`>i"<esc>
+" :vnoremap <leader>' `<i'<esc>`>i'<esc>
+
+" Navigation
+"----------------------------------------
+:nnoremap H ^
+:nnoremap L $
+
+" Mode change
+"----------------------------------------
+:inoremap jk <esc>
+
+" Flush out muscle memory
+:inoremap <esc> <nop>
 
