@@ -16,12 +16,14 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'junegunn/goyo.vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'wting/rust.vim'
 Plugin 'wincent/Command-T'
 Plugin 'airblade/vim-gitgutter'
-
+Plugin 'bling/vim-airline'
+Plugin 'Yggdroot/indentLine'
+Plugin 'ryanss/vim-hackernews'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -191,6 +193,17 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+
+" Insert matching closing characters
+"inoremap {      {}<Left>
+inoremap {      {<CR>}<Esc>O
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}<Left>
+inoremap (      ()<Left>
+inoremap (<CR>  (<CR>)<Esc>O
+inoremap ((     (
+inoremap ()     ()<Left>
 
 
 """"""""""""""""""""""""""""""
