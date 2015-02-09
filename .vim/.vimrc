@@ -290,9 +290,6 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap VIM 0 to first non-blank character
-map 0 ^
-
 " Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
@@ -470,4 +467,8 @@ endfunction
 
 " Flush out muscle memory
 :inoremap <esc> <nop>
+:inoremap <up> <nop>
+:inoremap <down> <nop>
+:inoremap <left> <nop>
+:inoremap <right> <nop>
 
