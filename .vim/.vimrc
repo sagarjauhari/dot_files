@@ -131,12 +131,11 @@ set foldcolumn=1
 " Enable syntax highlighting
 syntax enable 
 
-try
-    colorscheme solarized
-catch
-endtry
-
+colorscheme solarized
 set background=dark
+
+" Fix git-gutter's sign-column contrast issue with dark solarized theme
+highlight clear SignColumn
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -154,7 +153,6 @@ set ffs=unix,dos,mac
 
 " Default font
 set guifont=Menlo:h14
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
