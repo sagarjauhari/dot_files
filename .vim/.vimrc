@@ -24,6 +24,7 @@ Plugin 'bling/vim-airline'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ryanss/vim-hackernews'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'kana/vim-vspec'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -120,6 +121,8 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
+set noeb vb t_vb=
+set vb t_vb=
 
 " Add a bit extra margin to the left
 set foldcolumn=1
@@ -365,9 +368,6 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " Quickly open a buffer for scribble
 map <leader>q :e ~/buffer<cr>
 
-" Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<cr>
-
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
@@ -472,3 +472,5 @@ endfunction
 :inoremap <left> <nop>
 :inoremap <right> <nop>
 
+" Autocmd
+"----------------------------------------
