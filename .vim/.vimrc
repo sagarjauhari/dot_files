@@ -478,15 +478,18 @@ endfunction
 
 " Autocmd
 "==============================================
-" Snippets
-:autocmd FileType python     :iabbrev <buffer> iff if:<left>
-:autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
-:autocmd FileType ruby       :iabbrev <buffer> iff if<enter>end<up>
-:autocmd FileType ruby       :iabbrev <buffer> def def<enter>end<up>
+:augroup code_snippets
+:  autocmd FileType python     :iabbrev <buffer> iff if:<left>
+:  autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
+:  autocmd FileType javascript :iabbrev <buffer> fn function
+:  autocmd FileType javascript :iabbrev <buffer> function XXXXXXXX
+:  autocmd FileType ruby       :iabbrev <buffer> iff if<enter>end<up>
+:  autocmd FileType ruby       :iabbrev <buffer> def def<enter>end<up>
+:augroup END
 
-" Comments
-:autocmd FileType vim        nnoremap <buffer> <localleader>c I" <esc>
-:autocmd FileType python     nnoremap <buffer> <localleader>c I# <esc>
-:autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
-
+:augroup code_comments
+:  autocmd FileType vim        nnoremap <buffer> <localleader>c I" <esc>
+:  autocmd FileType python     nnoremap <buffer> <localleader>c I# <esc>
+:  autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
+:augroup END
 
