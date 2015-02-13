@@ -32,6 +32,9 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin Customization
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Nerd Tree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -49,6 +52,10 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
+
+" Map leader and localleader
+:let mapleader = "\\"
+:let maplocalleader = "\\"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -432,24 +439,24 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-"""""""""""""""""""""""""""""""""""""""""""""""
-" Experimental mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Experimental mappings
 "
 " Inspired by Learn Vimscript the Hard Way
 " http://learnvimscriptthehardway.stevelosh.com
-"""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Open vimrc in a vertial split
-"----------------------------------------
+"==============================================
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " Common typos
-"----------------------------------------
+"==============================================
 :iabbrev adn and
 :iabbrev wordl world
 
 " Text manipulation
-"----------------------------------------
+"==============================================
 " Surround text with quotes
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 :nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
@@ -457,20 +464,29 @@ endfunction
 " :vnoremap <leader>' `<i'<esc>`>i'<esc>
 
 " Navigation
-"----------------------------------------
+"==============================================
 :nnoremap H ^
 :nnoremap L $
 
 " Mode change
-"----------------------------------------
+"==============================================
 :inoremap jk <esc>
+:vnoremap jk <esc>
 
 " Flush out muscle memory
 :inoremap <esc> <nop>
-:inoremap <up> <nop>
-:inoremap <down> <nop>
-:inoremap <left> <nop>
-:inoremap <right> <nop>
 
 " Autocmd
-"----------------------------------------
+"==============================================
+" Snippets
+:autocmd FileType python     :iabbrev <buffer> iff if:<left>
+:autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
+:autocmd FileType ruby       :iabbrev <buffer> iff if<enter>end<up>
+:autocmd FileType ruby       :iabbrev <buffer> def def<enter>end<up>
+
+" Comments
+:autocmd FileType vim        nnoremap <buffer> <localleader>c I" <esc>
+:autocmd FileType python     nnoremap <buffer> <localleader>c I# <esc>
+:autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
+
+
