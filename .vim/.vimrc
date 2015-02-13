@@ -36,8 +36,10 @@ filetype plugin indent on    " required
 " => Plugin Customization
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Nerd Tree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+:augroup nerd_tree
+:  autocmd StdinReadPre * let s:std_in=1
+:  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+:augroup END
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -277,10 +279,12 @@ catch
 endtry
 
 " Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
+:augroup remember_last
+:  autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+:augroup END
 " Remember info about open buffers on close
 set viminfo^=%
 
@@ -319,8 +323,10 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
+:augroup delete_trailing_ws
+:  autocmd BufWrite *.py :call DeleteTrailingWS()
+:  autocmd BufWrite *.coffee :call DeleteTrailingWS()
+:augroup END
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
