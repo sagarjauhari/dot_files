@@ -229,8 +229,8 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
+noremap j gj
+noremap k gk
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
@@ -460,6 +460,8 @@ endfunction
 "==============================================
 :iabbrev adn and
 :iabbrev wordl world
+:iabbrev witha with a
+:iabbrev @ saru<left><left>ga<right>ja<right>hari@gmc<left>ail.<right>om
 
 " Text manipulation
 "==============================================
