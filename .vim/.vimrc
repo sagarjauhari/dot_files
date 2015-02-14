@@ -164,7 +164,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 " Default font
-set guifont=Menlo:h14
+set guifont=Menlo:h12
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -501,3 +501,14 @@ endfunction
 :  autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
 :augroup END
 
+" Operator pending audocmds
+"--------------------------
+:augroup markdown_text
+"  Inside header
+:  autocmd FileType mkd :onoremap <buffer> ih :<c-u>execute
+     \ "normal! ?^[=-]\\{3,}$\r:nohlsearch\rkvg_"<cr>
+
+"  Around header
+:  autocmd FileType mkd :onoremap <buffer> ah :<c-u>execute
+     \ "normal! ?^[=-]\\{3,}$\r:nohlsearch\rg_vk0"<cr>
+:augroup END
