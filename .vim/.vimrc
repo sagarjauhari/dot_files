@@ -41,6 +41,9 @@ filetype plugin indent on    " required
 :  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 :augroup END
 
+" Airline
+let g:airline_powerline_fonts = 1
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -164,7 +167,8 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 " Default font
-set guifont=Menlo:h12
+" Install patched powerline font: https://github.com/powerline/fonts
+set guifont=Inconsolata\ for\ Powerline:h16
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -461,7 +465,10 @@ endfunction
 :iabbrev adn and
 :iabbrev wordl world
 :iabbrev witha with a
-:iabbrev @ saru<left><left>ga<right>ja<right>hari@gmc<left>ail.<right>om
+:augroup text_snippets
+:  autocmd FileType mkd :iabbrev <buffer> @
+   \ saru<left><left>ga<right>ja<right>hari@gmc<left>ail.<right>om
+:augroup END
 
 " Text manipulation
 "==============================================
