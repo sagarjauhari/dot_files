@@ -36,14 +36,18 @@ filetype plugin indent on    " required
 " => Plugin Customization
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Nerd Tree
+"----------
 :augroup nerd_tree
 :  autocmd StdinReadPre * let s:std_in=1
 :  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 :augroup END
 
 " Airline
+"--------
 let g:airline_powerline_fonts = 1
 
+" Automatically display all buffers when there's only one tab open
+let g:airline#extensions#tabline#enabled = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
