@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vundle
+" => Vundle {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -32,8 +32,8 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugin Customization
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Plugin Customization {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Nerd Tree
 "----------
@@ -49,8 +49,9 @@ let g:airline_powerline_fonts = 1
 " Automatically display all buffers when there's only one tab open
 let g:airline#extensions#tabline#enabled = 1
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => General {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
 set history=700
@@ -67,8 +68,8 @@ set autoread
 :let maplocalleader = "\\"
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM user interface
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => VIM user interface {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Disable scrollbars (real hackers don't use scrollbars for navigation!)
@@ -144,8 +145,8 @@ set vb t_vb=
 set foldcolumn=1
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Colors and Fonts {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
@@ -174,8 +175,8 @@ set ffs=unix,dos,mac
 " Install patched powerline font: https://github.com/powerline/fonts
 set guifont=Inconsolata\ for\ Powerline:h16
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Files, backups and undo {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
@@ -191,8 +192,8 @@ catch
 endtry
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Text, tab and indent related {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 set expandtab
@@ -224,17 +225,17 @@ inoremap ((     (
 inoremap ()     ()<Left>
 
 
-""""""""""""""""""""""""""""""
-" => Visual mode related
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Visual mode related {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Moving around, tabs, windows and buffers {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Treat long lines as break lines (useful when moving around in them)
 noremap j gj
@@ -298,9 +299,9 @@ set viminfo^=%
 
 
 
-""""""""""""""""""""""""""""""
-" => Status line
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Status line {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
 
@@ -309,8 +310,8 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Editing mappings {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
@@ -337,8 +338,8 @@ endfunc
 :augroup END
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Ack searching and cope displaying
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Ack searching and cope displaying {{{
 "    requires ack.vim - it's much better than vimgrep/grep
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " When you press gv you Ack after the selected text
@@ -367,8 +368,8 @@ map <leader>n :cn<cr>
 map <leader>p :cp<cr>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Spell checking {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
@@ -380,8 +381,8 @@ map <leader>sa zg
 map <leader>s? z=
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Misc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Misc {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
@@ -393,8 +394,8 @@ map <leader>q :e ~/buffer<cr>
 map <leader>pp :setlocal paste!<cr>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Helper functions
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Helper functions {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
@@ -453,8 +454,8 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Experimental mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Experimental mappings {{{
 "
 " Inspired by Learn Vimscript the Hard Way
 " http://learnvimscriptthehardway.stevelosh.com
@@ -523,3 +524,4 @@ endfunction
 :  autocmd FileType mkd :onoremap <buffer> ah :<c-u>execute
      \ "normal! ?^[=-]\\{3,}$\r:nohlsearch\rg_vk0"<cr>
 :augroup END
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
