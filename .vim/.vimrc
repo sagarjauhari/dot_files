@@ -19,13 +19,13 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'wting/rust.vim'
-Plugin 'wincent/Command-T'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ryanss/vim-hackernews'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kana/vim-vspec'
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
