@@ -13,7 +13,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'godlygeek/tabular'
@@ -36,13 +35,6 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Plugin Customization {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Nerd Tree
-"----------
-:augroup nerd_tree
-:  autocmd StdinReadPre * let s:std_in=1
-:  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-:augroup END
-
 " Airline
 "--------
 let g:airline_powerline_fonts = 1
@@ -50,6 +42,19 @@ let g:airline_powerline_fonts = 1
 " Automatically display all buffers when there's only one tab open
 let g:airline#extensions#tabline#enabled = 1
 
+" CtrlP
+"------
+" Set local working directory while searching files
+" 'r' - the nearest ancestor that contains one of these directories or files:
+"       .git .hg .svn .bzr _darcs, and your own root markers defined with the
+"       g:ctrlp_root_markers option.
+" 'a' - the directory of the current file, but only applies when the current
+"       working directory outside of CtrlP isn't a direct ancestor of the
+"       directory of the current file.
+let g:ctrlp_working_path_mode = 'ra'
+
+" List files using git ls-files
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => General {{{
