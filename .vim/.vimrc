@@ -235,6 +235,9 @@ inoremap (<CR>  (<CR>)<Esc>O
 inoremap ((     (
 inoremap ()     ()<Left>
 
+" Highlight the column after 80 chars
+set textwidth=80
+:set colorcolumn=+1  " highlight one columns after 'textwidth'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Visual mode related {{{
