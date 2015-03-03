@@ -26,6 +26,7 @@ Plugin 'ryanss/vim-hackernews'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kana/vim-vspec'
 Plugin 'kien/ctrlp.vim'
+Plugin 'mtth/scratch.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
