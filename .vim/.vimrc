@@ -58,9 +58,6 @@ let g:ctrlp_working_path_mode = 'ra'
 " List files using git ls-files
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 
-" Indentline
-"-----------
-let g:indentLine_char = '┆'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => General {{{
