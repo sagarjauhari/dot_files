@@ -13,20 +13,21 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/mru.vim'
-Plugin 'junegunn/goyo.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'wting/rust.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
-Plugin 'Yggdroot/indentLine'
-Plugin 'ryanss/vim-hackernews'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'godlygeek/tabular'
+Plugin 'junegunn/goyo.vim'
 Plugin 'kana/vim-vspec'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mtth/scratch.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'rking/ag.vim'
+Plugin 'ryanss/vim-hackernews'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/mru.vim'
+Plugin 'wting/rust.vim'
+Plugin 'yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
