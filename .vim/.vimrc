@@ -25,6 +25,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
 Plugin 'ryanss/vim-hackernews'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'wting/rust.vim'
 Plugin 'yggdroot/indentLine'
@@ -44,6 +46,13 @@ let g:airline_powerline_fonts = 1
 
 " Automatically display all buffers when there's only one tab open
 let g:airline#extensions#tabline#enabled = 1
+
+" The Silver Searcher (Ag)
+"-------------------------
+" Bind K to search word under cursor
+nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+" TODO add vmode key to search selected text
+" vnoremap K :Ag `<i"<esc>`>i"<esc>
 
 " CtrlP
 "------
@@ -183,7 +192,7 @@ set ffs=unix,dos,mac
 
 " Default font
 " Install patched powerline font: https://github.com/powerline/fonts
-set guifont=Inconsolata\ for\ Powerline:h16
+set guifont=Inconsolata\ for\ Powerline:h15
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Files, backups and undo {{{
@@ -502,14 +511,6 @@ endfunction
 :  autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
 :  autocmd FileType javascript :iabbrev <buffer> fn function
 :  autocmd FileType javascript :iabbrev <buffer> function XXXXXXXX
-:  autocmd FileType ruby       :iabbrev <buffer> iff if<enter>end<up>
-:  autocmd FileType ruby       :iabbrev <buffer> def def<enter>end<up>
-:augroup END
-
-:augroup code_comments
-:  autocmd FileType vim        nnoremap <buffer> <localleader>c I" <esc>
-:  autocmd FileType python     nnoremap <buffer> <localleader>c I# <esc>
-:  autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
 :augroup END
 
 " Operator pending audocmds
