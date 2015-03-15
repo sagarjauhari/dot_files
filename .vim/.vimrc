@@ -25,6 +25,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
 Plugin 'ryanss/vim-hackernews'
 Plugin 'scrooloose/nerdtree'
+Plugin 'terryma/vim-expand-region'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-scripts/mru.vim'
@@ -67,6 +68,11 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " List files using git ls-files
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
+
+" Expand Region
+" -------------
+" Expand region in visual mode by repeating 'v'
+vmap v <Plug>(expand_region_expand)
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
