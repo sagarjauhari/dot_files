@@ -20,6 +20,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'junegunn/goyo.vim'
 Plugin 'kana/vim-vspec'
 Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
 Plugin 'mtth/scratch.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
@@ -168,6 +170,9 @@ set vb t_vb=
 
 " Add a bit extra margin to the left
 set foldcolumn=1
+
+" When copying/cutting use the system clipboard
+set clipboard=unnamed
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
