@@ -51,14 +51,14 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 " The Silver Searcher (Ag)
-"-------------------------
+" ------------------------------------------
 " Bind K to search word under cursor
 nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 " TODO add vmode key to search selected text
 " vnoremap K :Ag `<i"<esc>`>i"<esc>
 
 " CtrlP
-"------
+" ------------------------------------------
 " Set local working directory while searching files
 " 'r' - the nearest ancestor that contains one of these directories or files:
 "       .git .hg .svn .bzr _darcs, and your own root markers defined with the
@@ -72,10 +72,17 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 
 " Expand Region
-" -------------
+" ------------------------------------------
 " Expand region in visual mode by repeating 'v'
 vmap v <Plug>(expand_region_expand)
 
+" Scratch
+" ------------------------------------------
+let g:scratch_horizontal = 0        " Vertical window
+let g:scratch_top = 0               " Rigt side
+let g:scratch_insert_autohide = 0   " Do not hide on leaving insert mode
+let g:scratch_filetype = 'ruby'     " Default filetype for syntax highlight
+let g:scratch_height = 50
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => General {{{
