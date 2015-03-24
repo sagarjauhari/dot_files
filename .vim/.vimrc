@@ -69,8 +69,11 @@ nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 "       directory of the current file.
 let g:ctrlp_working_path_mode = 'ra'
 
-" For macvim, map Cmd + T to CtrlP. For this, first unmap old binding
-" This binding is present in .gvimrc
+" For macvim change CtrP mapping to Cmd + t
+" For this, first free the gui mapping in gvimrc
+if has ("gui_macvim")
+  let g:ctrlp_map = '<D-t>'
+endif
 
 " List files using git ls-files
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
