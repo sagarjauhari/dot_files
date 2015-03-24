@@ -22,6 +22,7 @@ Plugin 'kana/vim-vspec'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
+Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'mtth/scratch.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
@@ -83,6 +84,11 @@ let g:scratch_top = 0               " Rigt side
 let g:scratch_insert_autohide = 0   " Do not hide on leaving insert mode
 let g:scratch_filetype = 'ruby'     " Default filetype for syntax highlight
 let g:scratch_height = 50
+
+" Bookmarks
+" ------------------------------------------
+let g:bookmark_sign = '♥'
+highlight BookmarkSign ctermfg=147 guifg=SlateBlue1    "x146_LightSteelBlue3
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => General {{{
@@ -268,6 +274,9 @@ inoremap ()     ()<Left>
 " Highlight the column after 80 chars
 set textwidth=80
 :set colorcolumn=+1  " highlight one columns after 'textwidth'
+
+" Instant rewrap
+nnoremap œ gq}       " This is the <Alt-q> Combination
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Visual mode related {{{
