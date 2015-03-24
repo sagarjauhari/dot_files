@@ -69,6 +69,9 @@ nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 "       directory of the current file.
 let g:ctrlp_working_path_mode = 'ra'
 
+" For macvim, map Cmd + T to CtrlP. For this, first unmap old binding
+" This binding is present in .gvimrc
+
 " List files using git ls-files
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 
@@ -398,7 +401,6 @@ vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 "   <leader>p
 "
 map <leader>cc :botright cope<cr>
-map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
 
