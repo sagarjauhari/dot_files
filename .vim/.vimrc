@@ -78,6 +78,9 @@ endif
 " List files using git ls-files
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 
+" Placement of window, order and size of file list
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:10,results:10'
+
 " Expand Region
 " ------------------------------------------
 " Expand region in visual mode by repeating 'v'
