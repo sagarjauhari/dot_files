@@ -198,7 +198,7 @@ set clipboard=unnamed
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
-" => Colors and Fonts {{{
+" => Cursor, Colors and Fonts {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
@@ -226,6 +226,17 @@ set ffs=unix,dos,mac
 " Default font
 " Install patched powerline font: https://github.com/powerline/fonts
 set guifont=Inconsolata\ for\ Powerline:h15
+
+" Customize the cursor
+set guicursor=
+      \n:block-Cursor/lCursor,
+      \v:block-Cursor/lCursor-blinkoff0,
+      \ve:ver35-Cursor,
+      \o:hor50-Cursor,
+      \c:block-Cursor/lCursor,
+      \i-ci:ver25-Cursor/lCursor,
+      \r-cr:hor20-Cursor/lCursor,
+      \sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Files, backups and undo {{{
