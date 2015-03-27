@@ -547,6 +547,7 @@ endfunction
 " Mode change
 "==============================================
 :inoremap jk <esc>
+:inoremap JK <esc>
 :vnoremap jk <esc>
 
 " Flush out muscle memory
