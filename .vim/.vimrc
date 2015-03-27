@@ -80,7 +80,7 @@ endif
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 
 " Placement of window, order and size of file list
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:10,results:10'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 
 " Expand Region
 " ------------------------------------------
@@ -98,7 +98,6 @@ let g:scratch_height = 50
 " Bookmarks
 " ------------------------------------------
 let g:bookmark_sign = '♥'
-highlight BookmarkSign ctermfg=147 guifg=SlateBlue1    "x146_LightSteelBlue3
 
 " Tagbar
 " ------------------------------------------
@@ -573,6 +572,7 @@ endfunction
 
 " Flush out muscle memory
 :inoremap <esc> <nop>
+:vnoremap <esc> <nop>
 
 " Autocmd
 "==============================================
