@@ -20,6 +20,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'junegunn/goyo.vim'
 Plugin 'kana/vim-vspec'
 Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'MattesGroeger/vim-bookmarks'
@@ -98,6 +99,23 @@ let g:scratch_height = 50
 " ------------------------------------------
 let g:bookmark_sign = '♥'
 highlight BookmarkSign ctermfg=147 guifg=SlateBlue1    "x146_LightSteelBlue3
+
+" Tagbar
+" ------------------------------------------
+" Open tagbar if supported file is opened in already running vim
+autocmd FileType * nested :call tagbar#autoopen(0)
+
+let g:tagbar_sort = 1             " Sort by position in file
+
+" NERDTree
+" ------------------------------------------
+" Open nerd tree automatically
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Close vim if nerdtree is the only window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
+      \ b:NERDTreeType == "primary") | q | endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => General {{{
@@ -239,6 +257,9 @@ set guicursor=
       \i-ci:ver15-Cursor/lCursor-blinkon0,
       \r-cr:hor20-Cursor/lCursor,
       \sm:block-Cursor-blinkwalt175-blinkoff150-blinkon175
+
+" MatchParen color
+highlight MatchParen guifg=white guibg=NONE
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Files, backups and undo {{{
