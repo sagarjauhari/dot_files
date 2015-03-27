@@ -227,16 +227,18 @@ set ffs=unix,dos,mac
 " Install patched powerline font: https://github.com/powerline/fonts
 set guifont=Inconsolata\ for\ Powerline:h15
 
-" Customize the cursor
+" Customize the cursor and selection
+highlight Visual guifg=darkolivegreen4 guibg=black
+highlight Cursor guifg=black guibg=green
 set guicursor=
-      \n:block-Cursor/lCursor,
-      \v:block-Cursor/lCursor-blinkoff0,
+      \n:hor10-Cursor/lCursor,
+      \v:hor10-Cursor/lCursor-blinkoff0,
       \ve:ver35-Cursor,
       \o:hor50-Cursor,
-      \c:block-Cursor/lCursor,
-      \i-ci:ver25-Cursor/lCursor,
+      \c:ver20-Cursor/lCursor,
+      \i-ci:ver15-Cursor/lCursor-blinkon0,
       \r-cr:hor20-Cursor/lCursor,
-      \sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
+      \sm:block-Cursor-blinkwalt175-blinkoff150-blinkon175
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Files, backups and undo {{{
