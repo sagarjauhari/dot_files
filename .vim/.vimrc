@@ -62,13 +62,16 @@ nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 " CtrlP
 " ------------------------------------------
 " Set local working directory while searching files
-" 'r' - the nearest ancestor that contains one of these directories or files:
-"       .git .hg .svn .bzr _darcs, and your own root markers defined with the
-"       g:ctrlp_root_markers option.
-" 'a' - the directory of the current file, but only applies when the current
-"       working directory outside of CtrlP isn't a direct ancestor of the
-"       directory of the current file.
-let g:ctrlp_working_path_mode = 'ra'
+" r - the nearest ancestor that contains one of these directories or files:
+"      .git .hg .svn .bzr _darcs, and your own root markers defined with the
+"      g:ctrlp_root_markers option.
+" a - the directory of the current file, but only applies when the current
+"      working directory outside of CtrlP isn't a direct ancestor of the
+"      directory of the current file.
+" w - begin finding a root from the current working directory outside of CtrlP
+"      instead of from the directory of the current file (default). Only applies
+"      when "r" is also present.
+let g:ctrlp_working_path_mode = 'rwa'
 
 " For macvim change CtrP mapping to Cmd + t
 " For this, first free the gui mapping in gvimrc
@@ -111,6 +114,12 @@ let g:tagbar_sort = 1             " Sort by position in file
 " Open nerd tree automatically
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Open bookmarks automatically
+let NERDTreeShowBookmarks=1
+
+" Change working directory each time nerdtree's root changes
+let NERDTreeChDirMode=2
 
 " Close vim if nerdtree is the only window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
