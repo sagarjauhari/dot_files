@@ -23,7 +23,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
-Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'mtth/scratch.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
@@ -97,10 +96,6 @@ let g:scratch_top = 0               " Rigt side
 let g:scratch_insert_autohide = 0   " Do not hide on leaving insert mode
 let g:scratch_filetype = 'ruby'     " Default filetype for syntax highlight
 let g:scratch_height = 50
-
-" Bookmarks
-" ------------------------------------------
-let g:bookmark_sign = '♥'
 
 " Tagbar
 " ------------------------------------------
