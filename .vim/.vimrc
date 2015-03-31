@@ -16,6 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
+Plugin 'chiedojohn/vim-case-convert'
 Plugin 'godlygeek/tabular'
 Plugin 'junegunn/goyo.vim'
 Plugin 'kana/vim-vspec'
@@ -32,6 +33,7 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-scripts/mru.vim'
+Plugin 'wlangstroth/vim-racket'
 Plugin 'wting/rust.vim'
 Plugin 'yggdroot/indentLine'
 
@@ -226,9 +228,6 @@ syntax enable
 
 colorscheme solarized
 set background=dark
-
-" Fix git-gutter's sign-column contrast issue with dark solarized theme
-highlight clear SignColumn
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -533,6 +532,15 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => GitGutter fixes {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Sign Column made by solarized color is strange, clear it
+highlight clear SignColumn
+
+" vim-gitgutter will use Sign Column to set its color, reload it.
+call gitgutter#highlight#define_highlights()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Experimental mappings {{{
