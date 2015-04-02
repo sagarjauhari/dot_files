@@ -122,6 +122,9 @@ let NERDTreeChDirMode=2
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
       \ b:NERDTreeType == "primary") | q | endif
 
+" Disable the annoying balloon expression
+set noballooneval
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => General {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
