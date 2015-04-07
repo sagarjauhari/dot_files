@@ -595,6 +595,10 @@ call gitgutter#highlight#define_highlights()
 :  autocmd FileType javascript :iabbrev <buffer> function XXXXXXXX
 :augroup END
 
+:augroup fold_levels
+:  autocmd FileType mkd        setlocal foldlevel=2
+:augroup END
+
 " Operator pending audocmds
 "--------------------------
 :augroup markdown_text
