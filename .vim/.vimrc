@@ -21,6 +21,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'junegunn/goyo.vim'
 Plugin 'kana/vim-vspec'
 Plugin 'kien/ctrlp.vim'
+Plugin 'neilagabriel/vim-geeknote'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
@@ -86,6 +87,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 " Placement of window, order and size of file list
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 
+" MRU Mode
+nnoremap <D-r> :CtrlPMRU<CR>
+
 " Expand Region
 " ------------------------------------------
 " Expand region in visual mode by repeating 'v'
@@ -97,7 +101,7 @@ let g:scratch_horizontal = 0        " Vertical window
 let g:scratch_top = 0               " Rigt side
 let g:scratch_insert_autohide = 0   " Do not hide on leaving insert mode
 let g:scratch_filetype = 'ruby'     " Default filetype for syntax highlight
-let g:scratch_height = 50
+let g:scratch_height = 0.3
 
 " Tagbar
 " ------------------------------------------
@@ -475,6 +479,9 @@ map <leader>q :e ~/buffer<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+augroup filetype_pl
+  autocmd BufEnter * if &filetype == "perl" | setlocal filetype=prolog | endif
+augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Helper functions {{{
