@@ -1,0 +1,26 @@
+%FILE%
+=============================
+
+Context
+=============================
+%HERE%
+
+Resolution
+=============================
+Run the following code in Rainbow
+
+```ruby
+
+PREFIX = "prefix"
+
+Client.in_client(url_prefix: PREFIX) do
+  ActiveRecord::Base.transaction do
+    
+  end
+end
+```
+
+Asana Tasks
+=============================
+- 
+

@@ -131,6 +131,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
 " Disable the annoying balloon expression
 set noballooneval
 
+" Vim Template
+" ------------------------------------------
+" Set folder for global template search
+let g:templates_directory = ['~/dot_files/.vim/templates']
+
+" Plasticboy/markdown
+" ------------------------------------------
+let g:vim_markdown_folding_disabled=1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => General {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -605,7 +614,7 @@ call gitgutter#highlight#define_highlights()
 :augroup END
 
 :augroup fold_levels
-:  autocmd FileType mkd        setlocal foldlevel=2
+:  autocmd FileType mkd        setlocal foldlevel=3
 :augroup END
 
 " Operator pending audocmds
