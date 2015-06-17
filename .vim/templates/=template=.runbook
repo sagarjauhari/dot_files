@@ -15,7 +15,10 @@ PREFIX = "prefix"
 
 Client.in_client(url_prefix: PREFIX) do
   ActiveRecord::Base.transaction do
+    count = 0
     
+    puts "Commit #{count} changes? (y)"
+    raise "No changes committed" unless gets.chomp == "y"
   end
 end
 ```

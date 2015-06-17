@@ -23,11 +23,10 @@ Plugin 'godlygeek/tabular'
 Plugin 'junegunn/goyo.vim'
 Plugin 'kana/vim-vspec'
 Plugin 'kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
+Plugin 'kovisoft/slimv'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'mtth/scratch.vim'
-Plugin 'neilagabriel/vim-geeknote'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
 Plugin 'ryanss/vim-hackernews'
@@ -105,13 +104,6 @@ let g:scratch_insert_autohide = 0   " Do not hide on leaving insert mode
 let g:scratch_filetype = 'ruby'     " Default filetype for syntax highlight
 let g:scratch_height = 0.3
 
-" Tagbar
-" ------------------------------------------
-" Open tagbar if supported file is opened in already running vim
-autocmd FileType * nested :call tagbar#autoopen(0)
-
-let g:tagbar_sort = 1             " Sort by position in file
-
 " NERDTree
 " ------------------------------------------
 " Open nerd tree automatically
@@ -127,9 +119,6 @@ let NERDTreeChDirMode=2
 " Close vim if nerdtree is the only window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
       \ b:NERDTreeType == "primary") | q | endif
-
-" Disable the annoying balloon expression
-set noballooneval
 
 " Vim Template
 " ------------------------------------------
@@ -263,7 +252,7 @@ set ffs=unix,dos,mac
 
 " Default font
 " Install patched powerline font: https://github.com/powerline/fonts
-set guifont=Inconsolata\ for\ Powerline:h15
+set guifont=Inconsolata\ for\ Powerline:h14
 
 " Customize the cursor and selection
 highlight Visual guifg=darkolivegreen4 guibg=black
@@ -617,6 +606,11 @@ call gitgutter#highlight#define_highlights()
 :  autocmd FileType mkd        setlocal foldlevel=3
 :augroup END
 
+:augroup ruby
+   " Add/Remove focus from tests
+:  autocmd FileType ruby :nnoremap ff :s/\"\sdo/\"\, focus\: true do/<enter>:let @/=""<enter>
+:augroup END
+
 " Operator pending audocmds
 "--------------------------
 :augroup markdown_text
@@ -628,4 +622,9 @@ call gitgutter#highlight#define_highlights()
 :  autocmd FileType mkd :onoremap <buffer> ah :<c-u>execute
      \ "normal! ?^[=-]\\{3,}$\r:nohlsearch\rg_vk0"<cr>
 :augroup END
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => Other Tweaks {{{
+
+" Disable the annoying balloon expression
+set noballooneval
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
