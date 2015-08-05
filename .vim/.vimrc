@@ -20,6 +20,7 @@ Plugin 'bling/vim-airline'
 Plugin 'chiedojohn/vim-case-convert'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'godlygeek/tabular'
+Plugin 'jgdavey/vim-blockle'
 Plugin 'junegunn/goyo.vim'
 Plugin 'kana/vim-vspec'
 Plugin 'kchmck/vim-coffee-script'
@@ -35,10 +36,16 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-expand-region'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'wlangstroth/vim-racket'
 Plugin 'wting/rust.vim'
 Plugin 'yggdroot/indentLine'
+
+" Clojure
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-salve'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -267,6 +274,12 @@ set guicursor=
       \i-ci:ver15-Cursor/lCursor-blinkon0,
       \r-cr:hor20-Cursor/lCursor,
       \sm:block-Cursor-blinkwalt175-blinkoff150-blinkon175
+
+" Change cursor shape between insert and normal mode in iTerm2.app
+if $TERM_PROGRAM =~ "iTerm"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+endif
 
 " MatchParen color
 highlight MatchParen guifg=white guibg=NONE
@@ -608,8 +621,16 @@ call gitgutter#highlight#define_highlights()
 :augroup END
 
 :augroup ruby
-   " Add/Remove focus from tests
+"  Add/Remove focus from tests
 :  autocmd FileType ruby :nnoremap ff :s/\"\sdo/\"\, focus\: true do/<enter>:let @/=""<enter>
+
+"  Create pseudo code vars
+:  autocmd FileType ruby :iabbrev <buffer> --- = nil #
+:augroup END
+
+:augroup gitrebase
+  " Fixup during rebase
+:  autocmd FileType gitrebase :nnoremap ff :s/^pick/f/<enter>j
 :augroup END
 
 " Operator pending audocmds

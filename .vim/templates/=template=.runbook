@@ -13,14 +13,20 @@ Run the following code in Rainbow
 
 PREFIX = "prefix"
 
-Client.in_client(url_prefix: PREFIX) do
-  ActiveRecord::Base.transaction do
-    count = 0
-    
-    puts "Commit #{count} changes? (y)"
-    raise "No changes committed" unless gets.chomp == "y"
+def function(prefix: , admin_id:)
+  Client.in_client(url_prefix: PREFIX) do
+    confirm do
+      adm = Survey::Administration.find(admin_id)
+      unless adm
+        raise "Administration not found"
+      end
+
+
+    end
   end
 end
+
+function(prefix: PREFIX, admin_id: 000)
 ```
 
 Asana Tasks
