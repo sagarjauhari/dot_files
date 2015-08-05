@@ -438,6 +438,11 @@ endfunc
 :  autocmd BufWrite *.coffee :call DeleteTrailingWS()
 :augroup END
 
+" My left pinkie hurts because of using <shift> so often for all ':' commands
+nmap ,, :update<CR>
+" Flush out muscle memory :)
+:cnoremap w<CR> <nop>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Ack searching and cope displaying {{{
