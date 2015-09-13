@@ -25,13 +25,11 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'kana/vim-vspec'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
-Plugin 'kovisoft/slimv'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'mtth/scratch.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
-Plugin 'ryanss/vim-hackernews'
 Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-expand-region'
 Plugin 'tpope/vim-commentary'
@@ -128,6 +126,9 @@ let NERDTreeChDirMode=2
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
       \ b:NERDTreeType == "primary") | q | endif
 
+" Shortcut for NERDTreeFind
+nnoremap <leader>nf :NERDTreeFind<cr>
+
 " Vim Template
 " ------------------------------------------
 " Set folder for global template search
@@ -151,8 +152,8 @@ filetype indent on
 set autoread
 
 " Map leader and localleader
-:let mapleader = "\\"
-:let maplocalleader = "\\"
+:let mapleader = ","
+:let maplocalleader = ","
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
@@ -304,6 +305,13 @@ endtry
 " Note: Buffer is NOT deleted, so file can be retrieved
 :nnoremap <C-BS> :call delete(expand('%')) \| Bclose<CR>
 
+" My left pinkie hurts because of using <shift> so often for all ':' commands
+nmap <leader><leader> :update<CR>
+" Flush out muscle memory :)
+:cnoremap w<CR> <nop>
+
+" Autosave
+:set autowrite
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Text, tab and indent related {{{
@@ -438,21 +446,15 @@ endfunc
 :  autocmd BufWrite *.coffee :call DeleteTrailingWS()
 :augroup END
 
-" My left pinkie hurts because of using <shift> so often for all ':' commands
-nmap ,, :update<CR>
-" Flush out muscle memory :)
-:cnoremap w<CR> <nop>
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Ack searching and cope displaying {{{
 "    requires ack.vim - it's much better than vimgrep/grep
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " When you press gv you Ack after the selected text
-vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
+" vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
 
 " Open Ack and put the cursor in the right position
-map <leader>g :Ack 
+" map <leader>g :Ack 
 
 " When you press <leader>r you can search and replace the selected text
 vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
@@ -468,16 +470,16 @@ vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 " To go to the previous search results do:
 "   <leader>p
 "
-map <leader>cc :botright cope<cr>
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
+" map <leader>cc :botright cope<cr>
+" map <leader>n :cn<cr>
+" map <leader>p :cp<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Spell checking {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
+map <eader>ss :setlocal spell!<cr>
 
 " Shortcuts using <leader>
 map <leader>sn ]s
