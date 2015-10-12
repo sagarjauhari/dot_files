@@ -25,6 +25,7 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'kana/vim-vspec'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
+Plugin 'maksimr/vim-jsbeautify'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'mtth/scratch.vim'
@@ -35,6 +36,7 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people'
+Plugin 'valloric/youcompleteme'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'wlangstroth/vim-racket'
 Plugin 'wting/rust.vim'
@@ -633,6 +635,11 @@ call gitgutter#highlight#define_highlights()
 
 "  Create pseudo code vars
 :  autocmd FileType ruby :iabbrev <buffer> --- = nil #
+:augroup END
+
+:augroup javascript
+" Add/Remove console.log
+:  autocmd FileType javascript :nnoremap ff oconsole.log("");<left><left><left>
 :augroup END
 
 :augroup gitrebase
