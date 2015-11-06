@@ -129,7 +129,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
       \ b:NERDTreeType == "primary") | q | endif
 
 " Shortcut for NERDTreeFind
-nnoremap <leader>nf :NERDTreeFind<cr>
+nnoremap ;; :NERDTreeFind<cr>
 
 " Vim Template
 " ------------------------------------------
@@ -621,8 +621,6 @@ call gitgutter#highlight#define_highlights()
 :augroup code_snippets
 :  autocmd FileType python     :iabbrev <buffer> iff if:<left>
 :  autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
-:  autocmd FileType javascript :iabbrev <buffer> fn function
-:  autocmd FileType javascript :iabbrev <buffer> function XXXXXXXX
 :augroup END
 
 :augroup fold_levels
@@ -657,6 +655,9 @@ call gitgutter#highlight#define_highlights()
 "  Around header
 :  autocmd FileType mkd :onoremap <buffer> ah :<c-u>execute
      \ "normal! ?^[=-]\\{3,}$\r:nohlsearch\rg_vk0"<cr>
+
+  " Add link
+:  autocmd FileType mkd :nnoremap fl a<space>[link]()<left>
 :augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Other Tweaks {{{
