@@ -124,6 +124,9 @@ let NERDTreeShowBookmarks=1
 " Change working directory each time nerdtree's root changes
 let NERDTreeChDirMode=2
 
+" Autoclose NERDTree after opening file
+let NERDTreeQuitOnOpen = 1
+
 " Close vim if nerdtree is the only window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
       \ b:NERDTreeType == "primary") | q | endif
