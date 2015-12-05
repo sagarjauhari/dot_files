@@ -21,6 +21,7 @@ Plugin 'chiedojohn/vim-case-convert'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'godlygeek/tabular'
 Plugin 'jgdavey/vim-blockle'
+Plugin 'jpalardy/vim-slime'
 Plugin 'junegunn/goyo.vim'
 Plugin 'kana/vim-vspec'
 Plugin 'kchmck/vim-coffee-script'
@@ -142,6 +143,15 @@ let g:templates_directory = ['~/dot_files/.vim/templates']
 " Plasticboy/markdown
 " ------------------------------------------
 let g:vim_markdown_folding_disabled=1
+
+" Vim-Slime
+" ------------------------------------------
+let g:slime_target = "tmux"
+
+" Easier command than C-c C-c
+:nnoremap <leader>t :SlimeSend<cr>
+:vnoremap <leader>t :'<,'>SlimeSend<cr>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => General {{{
