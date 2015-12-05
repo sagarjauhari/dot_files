@@ -4,7 +4,7 @@ require "rugged"
 
 class DotFileConvert
   def self.generate_html!
-    filename = "index2.html"
+    filename = "index.html"
     data = new.generate_html
 
     puts "Overwrite exiting #{filename}? (y)"
