@@ -32,7 +32,10 @@ class DotFileConvert
     vimrc_oid = repo.lookup(vim_oid).find{|r| r[:name] == ".vimrc"}[:oid]
     text = repo.lookup(vimrc_oid).content
 
-    text
+    text.
+      gsub(/^([^\"])/, '    \0').
+      gsub(/\"\"\"*/, "").
+      gsub(/^\" /, "### ")
   end
 
   def section

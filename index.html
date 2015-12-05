@@ -1,19 +1,24 @@
-<!doctype html><html><head>  <meta charset="utf-8">  <meta http-equiv="X-UA-Compatible" content="chrome=1">  <title>Dot files by sagarjauhari</title>  <link rel="stylesheet" href="stylesheets/styles.css">  <link rel="stylesheet" href="stylesheets/github-light.css">  <meta name="viewport" content="width=device-width">  <!--[if lt IE 9]>  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>  <![endif]--></head><body>  <div class="wrapper"><header>  <h1>Dot files</h1>  <p>The name says it all</p>  <p class="view"><a href="https://github.com/sagarjauhari/dot_files">View the Project on GitHub <small>sagarjauhari/dot_files</small></a></p>  <ul>    <li><a href="https://github.com/sagarjauhari/dot_files/zipball/master">Download <strong>ZIP File</strong></a></li>    <li><a href="https://github.com/sagarjauhari/dot_files/tarball/master">Download <strong>TAR Ball</strong></a></li>    <li><a href="https://github.com/sagarjauhari/dot_files">View On <strong>GitHub</strong></a></li>  </ul></header><section><p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; =&gt; Vundle {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-set nocompatible              &quot; be iMproved, required
-filetype off                  &quot; required</p>
+<!doctype html><html><head>  <meta charset="utf-8">  <meta http-equiv="X-UA-Compatible" content="chrome=1">  <title>Dot files by sagarjauhari</title>  <link rel="stylesheet" href="stylesheets/styles.css">  <link rel="stylesheet" href="stylesheets/github-light.css">  <meta name="viewport" content="width=device-width">  <!--[if lt IE 9]>  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>  <![endif]--></head><body>  <div class="wrapper"><header>  <h1>Dot files</h1>  <p>The name says it all</p>  <p class="view"><a href="https://github.com/sagarjauhari/dot_files">View the Project on GitHub <small>sagarjauhari/dot_files</small></a></p>  <ul>    <li><a href="https://github.com/sagarjauhari/dot_files/zipball/master">Download <strong>ZIP File</strong></a></li>    <li><a href="https://github.com/sagarjauhari/dot_files/tarball/master">Download <strong>TAR Ball</strong></a></li>    <li><a href="https://github.com/sagarjauhari/dot_files">View On <strong>GitHub</strong></a></li>  </ul></header><section><h3>=&gt; Vundle {{{</h3>
 
-<p>&quot; set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+<pre><code>set nocompatible              &quot; be iMproved, required
+filetype off                  &quot; required
+</code></pre>
+
+<h3>set the runtime path to include Vundle and initialize</h3>
+
+<pre><code>set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-&quot; alternatively, pass a path where Vundle should install plugins
-&quot;call vundle#begin(&#39;~/some/path/here&#39;)</p>
+</code></pre>
 
-<p>&quot; let Vundle manage Vundle, required
-Plugin &#39;gmarik/Vundle.vim&#39;</p>
+<h3>alternatively, pass a path where Vundle should install plugins</h3>
 
-<p>Plugin &#39;airblade/vim-gitgutter&#39;
+<p>&quot;call vundle#begin(&#39;~/some/path/here&#39;)</p>
+
+<h3>let Vundle manage Vundle, required</h3>
+
+<pre><code>Plugin &#39;gmarik/Vundle.vim&#39;
+
+Plugin &#39;airblade/vim-gitgutter&#39;
 Plugin &#39;altercation/vim-colors-solarized&#39;
 Plugin &#39;aperezdc/vim-template&#39;
 Plugin &#39;bling/vim-airline&#39;
@@ -40,233 +45,358 @@ Plugin &#39;valloric/youcompleteme&#39;
 Plugin &#39;vim-scripts/mru.vim&#39;
 Plugin &#39;wlangstroth/vim-racket&#39;
 Plugin &#39;wting/rust.vim&#39;
-Plugin &#39;yggdroot/indentLine&#39;</p>
+Plugin &#39;yggdroot/indentLine&#39;
+</code></pre>
 
-<p>&quot; Clojure
-Plugin &#39;guns/vim-clojure-static&#39;
+<h3>Clojure</h3>
+
+<pre><code>Plugin &#39;guns/vim-clojure-static&#39;
 Plugin &#39;tpope/vim-fireplace&#39;
-Plugin &#39;tpope/vim-salve&#39;</p>
+Plugin &#39;tpope/vim-salve&#39;
+</code></pre>
 
-<p>&quot; All of your Plugins must be added before the following line
-call vundle#end()            &quot; required
+<h3>All of your Plugins must be added before the following line</h3>
+
+<pre><code>call vundle#end()            &quot; required
 filetype plugin indent on    &quot; required
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</p>
+</code></pre>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Plugin Customization {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; Airline
-&quot;--------
-let g:airline<em>powerline</em>fonts = 1</p>
+<p>}}}</p>
 
-<p>&quot; Automatically display all buffers when there&#39;s only one tab open
-let g:airline#extensions#tabline#enabled = 1</p>
+<h3>=&gt; Plugin Customization {{{</h3>
 
-<p>&quot; The Silver Searcher (Ag)
-&quot; ------------------------------------------
-&quot; Bind K to search word under cursor
-nnoremap K :Ag &quot;\b<C-R><C-W>\b&quot;<CR>:cw<CR>
-&quot; TODO add vmode key to search selected text
-&quot; vnoremap K :Ag <code>&lt;i&quot;&lt;esc&gt;</code>&gt;i&quot;<esc></p>
+<h3>Airline</h3>
 
-<p>&quot; CtrlP
-&quot; ------------------------------------------
-&quot; Set local working directory while searching files
-&quot; r - the nearest ancestor that contains one of these directories or files:
-&quot;      .git .hg .svn .bzr <em>darcs, and your own root markers defined with the
-&quot;      g:ctrlp</em>root<em>markers option.
-&quot; a - the directory of the current file, but only applies when the current
-&quot;      working directory outside of CtrlP isn&#39;t a direct ancestor of the
-&quot;      directory of the current file.
-&quot; w - begin finding a root from the current working directory outside of CtrlP
-&quot;      instead of from the directory of the current file (default). Only applies
-&quot;      when &quot;r&quot; is also present.
-let g:ctrlp</em>working<em>path</em>mode = &#39;rwa&#39;</p>
+<p>&quot;--------
+    let g:airline<em>powerline</em>fonts = 1</p>
 
-<p>&quot; For macvim change CtrP mapping to Cmd + t
-&quot; For this, first free the gui mapping in gvimrc
-if has (&quot;gui<em>macvim&quot;)
-  let g:ctrlp</em>map = &#39;<D-t>&#39;
-endif</p>
+<h3>Automatically display all buffers when there&#39;s only one tab open</h3>
 
-<p>&quot; List files using git ls-files
-let g:ctrlp<em>user</em>command = [&#39;.git&#39;, &#39;cd %s &amp;&amp; git ls-files . -co --exclude-standard&#39;]</p>
+<pre><code>let g:airline#extensions#tabline#enabled = 1
+</code></pre>
 
-<p>&quot; Placement of window, order and size of file list
-let g:ctrlp<em>match</em>window = &#39;bottom,order:btt,min:1,max:10,results:10&#39;</p>
+<h3>The Silver Searcher (Ag)</h3>
 
-<p>&quot; MRU Mode
-nnoremap <D-r> :CtrlPMRU<CR></p>
+<h3>------------------------------------------</h3>
 
-<p>&quot; Expand Region
-&quot; ------------------------------------------
-&quot; Expand region in visual mode by repeating &#39;v&#39;
-vmap v <Plug>(expand<em>region</em>expand)</p>
+<h3>Bind K to search word under cursor</h3>
 
-<p>&quot; Scratch
-&quot; ------------------------------------------
-let g:scratch<em>horizontal = 0        &quot; Vertical window
-let g:scratch</em>top = 0               &quot; Rigt side
-let g:scratch<em>insert</em>autohide = 0   &quot; Do not hide on leaving insert mode
-let g:scratch<em>filetype = &#39;ruby&#39;     &quot; Default filetype for syntax highlight
-let g:scratch</em>height = 0.3</p>
+<pre><code>nnoremap K :Ag &quot;\b&lt;C-R&gt;&lt;C-W&gt;\b&quot;&lt;CR&gt;:cw&lt;CR&gt;
+</code></pre>
 
-<p>&quot; NERDTree
-&quot; ------------------------------------------
-&quot; Open nerd tree automatically
-autocmd StdinReadPre * let s:std<em>in=1
-autocmd VimEnter * if argc() == 0 &amp;&amp; !exists(&quot;s:std</em>in&quot;) | NERDTree | endif</p>
+<h3>TODO add vmode key to search selected text</h3>
 
-<p>&quot; Open bookmarks automatically
-let NERDTreeShowBookmarks=1</p>
+<h3>vnoremap K :Ag <code>&lt;i&quot;&lt;esc&gt;</code>&gt;i&quot;<esc></h3>
 
-<p>&quot; Change working directory each time nerdtree&#39;s root changes
-let NERDTreeChDirMode=2</p>
+<h3>CtrlP</h3>
 
-<p>&quot; Autoclose NERDTree after opening file
-let NERDTreeQuitOnOpen = 1</p>
+<h3>------------------------------------------</h3>
 
-<p>&quot; Close vim if nerdtree is the only window
-autocmd bufenter * if (winnr(&quot;$&quot;) == 1 &amp;&amp; exists(&quot;b:NERDTreeType&quot;) &amp;&amp;
-      \ b:NERDTreeType == &quot;primary&quot;) | q | endif</p>
+<h3>Set local working directory while searching files</h3>
 
-<p>&quot; Shortcut for NERDTreeFind
-nnoremap ;; :NERDTreeFind<cr></p>
+<h3>r - the nearest ancestor that contains one of these directories or files:</h3>
 
-<p>&quot; Vim Template
-&quot; ------------------------------------------
-&quot; Set folder for global template search
-let g:templates<em>directory = [&#39;~/dot</em>files/.vim/templates&#39;]</p>
+<h3>.git .hg .svn .bzr _darcs, and your own root markers defined with the</h3>
 
-<p>&quot; Plasticboy/markdown
-&quot; ------------------------------------------
-let g:vim<em>markdown</em>folding_disabled=1</p>
+<h3>g:ctrlp<em>root</em>markers option.</h3>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; General {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; Sets how many lines of history VIM has to remember
-set history=700</p>
+<h3>a - the directory of the current file, but only applies when the current</h3>
 
-<p>&quot; Enable filetype plugins
-filetype plugin on
-filetype indent on</p>
+<h3>working directory outside of CtrlP isn&#39;t a direct ancestor of the</h3>
 
-<p>&quot; Set to auto read when a file is changed from the outside
-set autoread</p>
+<h3>directory of the current file.</h3>
 
-<p>&quot; Map leader and localleader
-:let mapleader = &quot;,&quot;
-:let maplocalleader = &quot;,&quot;</p>
+<h3>w - begin finding a root from the current working directory outside of CtrlP</h3>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; VIM user interface {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</p>
+<h3>instead of from the directory of the current file (default). Only applies</h3>
 
-<p>&quot; Disable scrollbars (real hackers don&#39;t use scrollbars for navigation!)
-set guioptions-=r
+<h3>when &quot;r&quot; is also present.</h3>
+
+<pre><code>let g:ctrlp_working_path_mode = &#39;rwa&#39;
+</code></pre>
+
+<h3>For macvim change CtrP mapping to Cmd + t</h3>
+
+<h3>For this, first free the gui mapping in gvimrc</h3>
+
+<pre><code>if has (&quot;gui_macvim&quot;)
+  let g:ctrlp_map = &#39;&lt;D-t&gt;&#39;
+endif
+</code></pre>
+
+<h3>List files using git ls-files</h3>
+
+<pre><code>let g:ctrlp_user_command = [&#39;.git&#39;, &#39;cd %s &amp;&amp; git ls-files . -co --exclude-standard&#39;]
+</code></pre>
+
+<h3>Placement of window, order and size of file list</h3>
+
+<pre><code>let g:ctrlp_match_window = &#39;bottom,order:btt,min:1,max:10,results:10&#39;
+</code></pre>
+
+<h3>MRU Mode</h3>
+
+<pre><code>nnoremap &lt;D-r&gt; :CtrlPMRU&lt;CR&gt;
+</code></pre>
+
+<h3>Expand Region</h3>
+
+<h3>------------------------------------------</h3>
+
+<h3>Expand region in visual mode by repeating &#39;v&#39;</h3>
+
+<pre><code>vmap v &lt;Plug&gt;(expand_region_expand)
+</code></pre>
+
+<h3>Scratch</h3>
+
+<h3>------------------------------------------</h3>
+
+<pre><code>let g:scratch_horizontal = 0        &quot; Vertical window
+let g:scratch_top = 0               &quot; Rigt side
+let g:scratch_insert_autohide = 0   &quot; Do not hide on leaving insert mode
+let g:scratch_filetype = &#39;ruby&#39;     &quot; Default filetype for syntax highlight
+let g:scratch_height = 0.3
+</code></pre>
+
+<h3>NERDTree</h3>
+
+<h3>------------------------------------------</h3>
+
+<h3>Open nerd tree automatically</h3>
+
+<pre><code>autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 &amp;&amp; !exists(&quot;s:std_in&quot;) | NERDTree | endif
+</code></pre>
+
+<h3>Open bookmarks automatically</h3>
+
+<pre><code>let NERDTreeShowBookmarks=1
+</code></pre>
+
+<h3>Change working directory each time nerdtree&#39;s root changes</h3>
+
+<pre><code>let NERDTreeChDirMode=2
+</code></pre>
+
+<h3>Autoclose NERDTree after opening file</h3>
+
+<pre><code>let NERDTreeQuitOnOpen = 1
+</code></pre>
+
+<h3>Close vim if nerdtree is the only window</h3>
+
+<pre><code>autocmd bufenter * if (winnr(&quot;$&quot;) == 1 &amp;&amp; exists(&quot;b:NERDTreeType&quot;) &amp;&amp;
+      \ b:NERDTreeType == &quot;primary&quot;) | q | endif
+</code></pre>
+
+<h3>Shortcut for NERDTreeFind</h3>
+
+<pre><code>nnoremap ;; :NERDTreeFind&lt;cr&gt;
+</code></pre>
+
+<h3>Vim Template</h3>
+
+<h3>------------------------------------------</h3>
+
+<h3>Set folder for global template search</h3>
+
+<pre><code>let g:templates_directory = [&#39;~/dot_files/.vim/templates&#39;]
+</code></pre>
+
+<h3>Plasticboy/markdown</h3>
+
+<h3>------------------------------------------</h3>
+
+<pre><code>let g:vim_markdown_folding_disabled=1
+</code></pre>
+
+<p>}}}</p>
+
+<h3>=&gt; General {{{</h3>
+
+<h3>Sets how many lines of history VIM has to remember</h3>
+
+<pre><code>set history=700
+</code></pre>
+
+<h3>Enable filetype plugins</h3>
+
+<pre><code>filetype plugin on
+filetype indent on
+</code></pre>
+
+<h3>Set to auto read when a file is changed from the outside</h3>
+
+<pre><code>set autoread
+</code></pre>
+
+<h3>Map leader and localleader</h3>
+
+<pre><code>:let mapleader = &quot;,&quot;
+:let maplocalleader = &quot;,&quot;
+</code></pre>
+
+<p>}}}</p>
+
+<h3>=&gt; VIM user interface {{{</h3>
+
+<h3>Disable scrollbars (real hackers don&#39;t use scrollbars for navigation!)</h3>
+
+<pre><code>set guioptions-=r
 set guioptions-=R
 set guioptions-=l
-set guioptions-=L</p>
+set guioptions-=L
+</code></pre>
 
-<p>&quot; Set 7 lines to the cursor - when moving vertically using j/k
-set so=7</p>
+<h3>Set 7 lines to the cursor - when moving vertically using j/k</h3>
 
-<p>&quot; Turn on the WiLd menu
-set wildmenu</p>
+<pre><code>set so=7
+</code></pre>
 
-<p>&quot; Ignore compiled files
-set wildignore=<em>.o,</em>~,<em>.pyc
+<h3>Turn on the WiLd menu</h3>
+
+<pre><code>set wildmenu
+</code></pre>
+
+<h3>Ignore compiled files</h3>
+
+<pre><code>set wildignore=*.o,*~,*.pyc
 if has(&quot;win16&quot;) || has(&quot;win32&quot;)
-    set wildignore+=</em>/.git/<em>,</em>/.hg/<em>,</em>/.svn/<em>,</em>/.DS_Store
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 else
-    set wildignore+=.git*,.hg*,.svn*
-endif</p>
+    set wildignore+=.git\*,.hg\*,.svn\*
+endif
+</code></pre>
 
 <p>&quot;Always show current position
-set ruler</p>
+    set ruler</p>
 
-<p>&quot; Height of the command bar
-set cmdheight=2</p>
+<h3>Height of the command bar</h3>
 
-<p>&quot; A buffer becomes hidden when it is abandoned
-set hidden</p>
+<pre><code>set cmdheight=2
+</code></pre>
 
-<p>&quot; Configure backspace so it acts as it should act
-set backspace=eol,start,indent
-set whichwrap+=&lt;,&gt;,h,l</p>
+<h3>A buffer becomes hidden when it is abandoned</h3>
 
-<p>&quot; In many terminal emulators the mouse works just fine, thus enable it.
-if has(&#39;mouse&#39;)
+<pre><code>set hidden
+</code></pre>
+
+<h3>Configure backspace so it acts as it should act</h3>
+
+<pre><code>set backspace=eol,start,indent
+set whichwrap+=&lt;,&gt;,h,l
+</code></pre>
+
+<h3>In many terminal emulators the mouse works just fine, thus enable it.</h3>
+
+<pre><code>if has(&#39;mouse&#39;)
   set mouse=a
-endif</p>
+endif
+</code></pre>
 
-<p>&quot; Ignore case when searching
-set ignorecase</p>
+<h3>Ignore case when searching</h3>
 
-<p>&quot; When searching try to be smart about cases 
-set smartcase</p>
+<pre><code>set ignorecase
+</code></pre>
 
-<p>&quot; Highlight search results
-set hlsearch</p>
+<h3>When searching try to be smart about cases</h3>
 
-<p>&quot; Makes search act like search in modern browsers
-set incsearch </p>
+<pre><code>set smartcase
+</code></pre>
 
-<p>&quot; Don&#39;t redraw while executing macros (good performance config)
-set lazyredraw </p>
+<h3>Highlight search results</h3>
 
-<p>&quot; For regular expressions turn magic on
-set magic</p>
+<pre><code>set hlsearch
+</code></pre>
 
-<p>&quot; Show matching brackets when text indicator is over them
-set showmatch 
-&quot; How many tenths of a second to blink when matching brackets
-set mat=2</p>
+<h3>Makes search act like search in modern browsers</h3>
 
-<p>&quot; No annoying sound on errors
-set noerrorbells
+<pre><code>set incsearch 
+</code></pre>
+
+<h3>Don&#39;t redraw while executing macros (good performance config)</h3>
+
+<pre><code>set lazyredraw 
+</code></pre>
+
+<h3>For regular expressions turn magic on</h3>
+
+<pre><code>set magic
+</code></pre>
+
+<h3>Show matching brackets when text indicator is over them</h3>
+
+<pre><code>set showmatch 
+</code></pre>
+
+<h3>How many tenths of a second to blink when matching brackets</h3>
+
+<pre><code>set mat=2
+</code></pre>
+
+<h3>No annoying sound on errors</h3>
+
+<pre><code>set noerrorbells
 set novisualbell
-set t<em>vb=
+set t_vb=
 set tm=500
-set noeb vb t</em>vb=
-set vb t_vb=</p>
+set noeb vb t_vb=
+set vb t_vb=
+</code></pre>
 
-<p>&quot; Add a bit extra margin to the left
-set foldcolumn=1</p>
+<h3>Add a bit extra margin to the left</h3>
 
-<p>&quot; When copying/cutting use the system clipboard
-set clipboard=unnamed</p>
+<pre><code>set foldcolumn=1
+</code></pre>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Cursor, Colors and Fonts {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; Enable syntax highlighting
-syntax enable </p>
+<h3>When copying/cutting use the system clipboard</h3>
 
-<p>colorscheme solarized
-set background=dark</p>
+<pre><code>set clipboard=unnamed
+</code></pre>
 
-<p>&quot; Set extra options when running in GUI mode
-if has(&quot;gui<em>running&quot;)
+<p>}}}</p>
+
+<h3>=&gt; Cursor, Colors and Fonts {{{</h3>
+
+<h3>Enable syntax highlighting</h3>
+
+<pre><code>syntax enable 
+
+colorscheme solarized
+set background=dark
+</code></pre>
+
+<h3>Set extra options when running in GUI mode</h3>
+
+<pre><code>if has(&quot;gui_running&quot;)
     set guioptions-=T
     set guioptions-=e
-    set t</em>Co=256
+    set t_Co=256
     set guitablabel=%M\ %t
-endif</p>
+endif
+</code></pre>
 
-<p>&quot; Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8</p>
+<h3>Set utf8 as standard encoding and en_US as the standard language</h3>
 
-<p>&quot; Use Unix as the standard file type
-set ffs=unix,dos,mac</p>
+<pre><code>set encoding=utf8
+</code></pre>
 
-<p>&quot; Default font
-&quot; Install patched powerline font: https://github.com/powerline/fonts
-set guifont=Inconsolata\ for\ Powerline:h14</p>
+<h3>Use Unix as the standard file type</h3>
 
-<p>&quot; Customize the cursor and selection
-highlight Visual guifg=darkolivegreen4 guibg=black
+<pre><code>set ffs=unix,dos,mac
+</code></pre>
+
+<h3>Default font</h3>
+
+<h3>Install patched powerline font: https://github.com/powerline/fonts</h3>
+
+<pre><code>set guifont=Inconsolata\ for\ Powerline:h14
+</code></pre>
+
+<h3>Customize the cursor and selection</h3>
+
+<pre><code>highlight Visual guifg=darkolivegreen4 guibg=black
 highlight Cursor guifg=black guibg=green
 set guicursor=
       \n:hor10-Cursor/lCursor,
@@ -276,388 +406,533 @@ set guicursor=
       \c:ver20-Cursor/lCursor,
       \i-ci:ver15-Cursor/lCursor-blinkon0,
       \r-cr:hor20-Cursor/lCursor,
-      \sm:block-Cursor-blinkwalt175-blinkoff150-blinkon175</p>
+      \sm:block-Cursor-blinkwalt175-blinkoff150-blinkon175
+</code></pre>
 
-<p>&quot; Change cursor shape between insert and normal mode in iTerm2.app
-if $TERM<em>PROGRAM =~ &quot;iTerm&quot;
-    let &amp;t</em>EI = &quot;&lt;Esc&gt;]50;CursorShape=0\x7&quot; &quot; Block in normal mode
-    let &amp;t_SI = &quot;&lt;Esc&gt;]50;CursorShape=1\x7&quot; &quot; Vertical bar in insert mode
-endif</p>
+<h3>Change cursor shape between insert and normal mode in iTerm2.app</h3>
 
-<p>&quot; MatchParen color
-highlight MatchParen guifg=white guibg=NONE</p>
+<pre><code>if $TERM_PROGRAM =~ &quot;iTerm&quot;
+    let &amp;t_EI = &quot;\&lt;Esc&gt;]50;CursorShape=0\x7&quot; &quot; Block in normal mode
+    let &amp;t_SI = &quot;\&lt;Esc&gt;]50;CursorShape=1\x7&quot; &quot; Vertical bar in insert mode
+endif
+</code></pre>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Files, backups and undo {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; Turn backup off, since most stuff is in SVN, git et.c anyway...
-set nobackup
+<h3>MatchParen color</h3>
+
+<pre><code>highlight MatchParen guifg=white guibg=NONE
+</code></pre>
+
+<p>}}}</p>
+
+<h3>=&gt; Files, backups and undo {{{</h3>
+
+<h3>Turn backup off, since most stuff is in SVN, git et.c anyway...</h3>
+
+<pre><code>set nobackup
 set nowb
-set noswapfile</p>
+set noswapfile
+</code></pre>
 
-<p>&quot; Turn persistent undo on
-&quot; means that you can undo even when you close a buffer/VIM
-try
-    set undodir=~/.vim<em>runtime/temp</em>dirs/undodir
+<h3>Turn persistent undo on</h3>
+
+<h3>means that you can undo even when you close a buffer/VIM</h3>
+
+<pre><code>try
+    set undodir=~/.vim_runtime/temp_dirs/undodir
     set undofile
 catch
-endtry</p>
+endtry
+</code></pre>
 
-<p>&quot; Delete current file and close buffer
-&quot; Note: Buffer is NOT deleted, so file can be retrieved
-:nnoremap <C-BS> :call delete(expand(&#39;%&#39;)) | Bclose<CR></p>
+<h3>Delete current file and close buffer</h3>
 
-<p>&quot; My left pinkie hurts because of using <shift> so often for all &#39;:&#39; commands
-nmap <leader><leader> :update<CR>
-&quot; Flush out muscle memory :)
-:cnoremap w<CR> <nop></p>
+<h3>Note: Buffer is NOT deleted, so file can be retrieved</h3>
 
-<p>&quot; Autosave
-:set autowrite</p>
+<pre><code>:nnoremap &lt;C-BS&gt; :call delete(expand(&#39;%&#39;)) \| Bclose&lt;CR&gt;
+</code></pre>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Text, tab and indent related {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; Use spaces instead of tabs
-set expandtab</p>
+<h3>My left pinkie hurts because of using <shift> so often for all &#39;:&#39; commands</h3>
 
-<p>&quot; Be smart when using tabs ;)
-set smarttab</p>
+<pre><code>nmap &lt;leader&gt;&lt;leader&gt; :update&lt;CR&gt;
+</code></pre>
 
-<p>&quot; 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2</p>
+<h3>Flush out muscle memory :)</h3>
 
-<p>&quot; Linebreak on 500 characters
-set lbr
-set tw=500</p>
+<pre><code>:cnoremap w&lt;CR&gt; &lt;nop&gt;
+</code></pre>
 
-<p>set ai &quot;Auto indent
+<h3>Autosave</h3>
+
+<pre><code>:set autowrite
+</code></pre>
+
+<p>}}}</p>
+
+<h3>=&gt; Text, tab and indent related {{{</h3>
+
+<h3>Use spaces instead of tabs</h3>
+
+<pre><code>set expandtab
+</code></pre>
+
+<h3>Be smart when using tabs ;)</h3>
+
+<pre><code>set smarttab
+</code></pre>
+
+<h3>1 tab == 2 spaces</h3>
+
+<pre><code>set shiftwidth=2
+set tabstop=2
+</code></pre>
+
+<h3>Linebreak on 500 characters</h3>
+
+<pre><code>set lbr
+set tw=500
+
+set ai &quot;Auto indent
 set si &quot;Smart indent
-set wrap &quot;Wrap lines</p>
+set wrap &quot;Wrap lines
+</code></pre>
 
-<p>&quot; Insert matching closing characters
-&quot;inoremap {      {}<Left>
-inoremap {      {<CR>}<Esc>O
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}<Left>
-inoremap (      ()<Left>
-inoremap (<CR>  (<CR>)<Esc>O
-inoremap ((     (
-inoremap ()     ()<Left></p>
+<h3>Insert matching closing characters</h3>
 
-<p>&quot; Highlight the column after 80 chars
-set textwidth=80
-:set colorcolumn=+1  &quot; highlight one columns after &#39;textwidth&#39;</p>
+<p>&quot;inoremap {      {}<Left>
+    inoremap {      {<CR>}<Esc>O
+    inoremap {<CR>  {<CR>}<Esc>O
+    inoremap {{     {
+    inoremap {}     {}<Left>
+    inoremap (      ()<Left>
+    inoremap (<CR>  (<CR>)<Esc>O
+    inoremap ((     (
+    inoremap ()     ()<Left></p>
 
-<p>&quot; Instant rewrap
-nnoremap œ gq}       &quot; This is the <Alt-q> Combination</p>
+<h3>Highlight the column after 80 chars</h3>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Visual mode related {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; Visual mode pressing * or # searches for the current selection
-&quot; Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :call VisualSelection(&#39;f&#39;, &#39;&#39;)<CR>
-vnoremap <silent> # :call VisualSelection(&#39;b&#39;, &#39;&#39;)<CR></p>
+<pre><code>set textwidth=80
+:set colorcolumn=+1  &quot; highlight one columns after &#39;textwidth&#39;
+</code></pre>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Moving around, tabs, windows and buffers {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; Treat long lines as break lines (useful when moving around in them)
-noremap j gj
-noremap k gk</p>
+<h3>Instant rewrap</h3>
 
-<p>&quot; Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?</p>
+<pre><code>nnoremap œ gq}       &quot; This is the &lt;Alt-q&gt; Combination
+</code></pre>
 
-<p>&quot; Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr></p>
+<p>}}}</p>
 
-<p>&quot; Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l</p>
+<h3>=&gt; Visual mode related {{{</h3>
 
-<p>&quot; Close the current buffer
-map <leader>bd :Bclose<cr></p>
+<h3>Visual mode pressing * or # searches for the current selection</h3>
 
-<p>&quot; Close all the buffers
-map <leader>ba :1,1000 bd!<cr></p>
+<h3>Super useful! From an idea by Michael Naumann</h3>
 
-<p>&quot; Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr></p>
+<pre><code>vnoremap &lt;silent&gt; * :call VisualSelection(&#39;f&#39;, &#39;&#39;)&lt;CR&gt;
+vnoremap &lt;silent&gt; # :call VisualSelection(&#39;b&#39;, &#39;&#39;)&lt;CR&gt;
+</code></pre>
 
-<p>&quot; Return to last edit position when opening files (You want this!)
-:augroup remember_last
+<p>}}}</p>
+
+<h3>=&gt; Moving around, tabs, windows and buffers {{{</h3>
+
+<h3>Treat long lines as break lines (useful when moving around in them)</h3>
+
+<pre><code>noremap j gj
+noremap k gk
+</code></pre>
+
+<h3>Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)</h3>
+
+<pre><code>map &lt;space&gt; /
+map &lt;c-space&gt; ?
+</code></pre>
+
+<h3>Disable highlight when <leader><cr> is pressed</h3>
+
+<pre><code>map &lt;silent&gt; &lt;leader&gt;&lt;cr&gt; :noh&lt;cr&gt;
+</code></pre>
+
+<h3>Smart way to move between windows</h3>
+
+<pre><code>map &lt;C-j&gt; &lt;C-W&gt;j
+map &lt;C-k&gt; &lt;C-W&gt;k
+map &lt;C-h&gt; &lt;C-W&gt;h
+map &lt;C-l&gt; &lt;C-W&gt;l
+</code></pre>
+
+<h3>Close the current buffer</h3>
+
+<pre><code>map &lt;leader&gt;bd :Bclose&lt;cr&gt;
+</code></pre>
+
+<h3>Close all the buffers</h3>
+
+<pre><code>map &lt;leader&gt;ba :1,1000 bd!&lt;cr&gt;
+</code></pre>
+
+<h3>Switch CWD to the directory of the open buffer</h3>
+
+<pre><code>map &lt;leader&gt;cd :cd %:p:h&lt;cr&gt;:pwd&lt;cr&gt;
+</code></pre>
+
+<h3>Return to last edit position when opening files (You want this!)</h3>
+
+<pre><code>:augroup remember_last
 :  autocmd BufReadPost *
-     \ if line(&quot;&#39;\&quot;&quot;) &gt; 0 &amp;&amp; line(&quot;&#39;\&quot;&quot;) &lt;= line(&quot;$&quot;) |
-     \   exe &quot;normal! g`\&quot;&quot; |
+     \ if line(&quot;&#39;\) &gt; 0 &amp;&amp; line(&quot;&#39;\) &lt;= line(&quot;$&quot;) |
+     \   exe &quot;normal! g`\ |
      \ endif
 :augroup END
-&quot; Remember info about open buffers on close
-set viminfo^=%</p>
+</code></pre>
 
-<p>&quot; Vimscript code folding
-augroup filetype_vim
+<h3>Remember info about open buffers on close</h3>
+
+<pre><code>set viminfo^=%
+</code></pre>
+
+<h3>Vimscript code folding</h3>
+
+<pre><code>augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
     autocmd FileType vim setlocal foldlevelstart=0
-augroup END</p>
+augroup END
+</code></pre>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Status line {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; Always show the status line
-set laststatus=2</p>
+<p>}}}</p>
 
-<p>&quot; Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l</p>
+<h3>=&gt; Status line {{{</h3>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Editing mappings {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
-nmap <M-j> mz:m+<cr><code>z
-nmap &lt;M-k&gt; mz:m-2&lt;cr&gt;</code>z
-vmap <M-j> :m&#39;&gt;+<cr><code>&lt;my</code>&gt;mzgv<code>yo</code>z
-vmap <M-k> :m&#39;&lt;-2<cr><code>&gt;my</code>&lt;mzgv<code>yo</code>z</p>
+<h3>Always show the status line</h3>
 
-<p>if has(&quot;mac&quot;) || has(&quot;macunix&quot;)
-  nmap <D-j> <M-j>
-  nmap <D-k> <M-k>
-  vmap <D-j> <M-j>
-  vmap <D-k> <M-k>
-endif</p>
+<pre><code>set laststatus=2
+</code></pre>
 
-<p>&quot; Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
+<h3>Format the status line</h3>
+
+<pre><code>set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+</code></pre>
+
+<p>}}}</p>
+
+<h3>=&gt; Editing mappings {{{</h3>
+
+<h3>Move a line of text using ALT+[jk] or Comamnd+[jk] on mac</h3>
+
+<pre><code>nmap &lt;M-j&gt; mz:m+&lt;cr&gt;`z
+nmap &lt;M-k&gt; mz:m-2&lt;cr&gt;`z
+vmap &lt;M-j&gt; :m&#39;&gt;+&lt;cr&gt;`&lt;my`&gt;mzgv`yo`z
+vmap &lt;M-k&gt; :m&#39;&lt;-2&lt;cr&gt;`&gt;my`&lt;mzgv`yo`z
+
+if has(&quot;mac&quot;) || has(&quot;macunix&quot;)
+  nmap &lt;D-j&gt; &lt;M-j&gt;
+  nmap &lt;D-k&gt; &lt;M-k&gt;
+  vmap &lt;D-j&gt; &lt;M-j&gt;
+  vmap &lt;D-k&gt; &lt;M-k&gt;
+endif
+</code></pre>
+
+<h3>Delete trailing white space on save, useful for Python and CoffeeScript ;)</h3>
+
+<pre><code>func! DeleteTrailingWS()
   exe &quot;normal mz&quot;
-  %s/\s+$//ge
+  %s/\s\+$//ge
   exe &quot;normal `z&quot;
 endfunc
-:augroup delete<em>trailing</em>ws
+:augroup delete_trailing_ws
 :  autocmd BufWrite *.py :call DeleteTrailingWS()
 :  autocmd BufWrite *.coffee :call DeleteTrailingWS()
-:augroup END</p>
+:augroup END
+</code></pre>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Ack searching and cope displaying {{{
-&quot;    requires ack.vim - it&#39;s much better than vimgrep/grep
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; When you press gv you Ack after the selected text
-&quot; vnoremap <silent> gv :call VisualSelection(&#39;gv&#39;, &#39;&#39;)<CR></p>
+<p>}}}</p>
 
-<p>&quot; Open Ack and put the cursor in the right position
-&quot; map <leader>g :Ack </p>
+<h3>=&gt; Ack searching and cope displaying {{{</h3>
 
-<p>&quot; When you press <leader>r you can search and replace the selected text
-vnoremap <silent> <leader>r :call VisualSelection(&#39;replace&#39;, &#39;&#39;)<CR></p>
+<h3>requires ack.vim - it&#39;s much better than vimgrep/grep</h3>
 
-<p>&quot; Do :help cope if you are unsure what cope is. It&#39;s super useful!
-&quot;
-&quot; When you search with Ack, display your results in cope by doing:
-&quot;   <leader>cc
-&quot;
-&quot; To go to the next search result do:
-&quot;   <leader>n
-&quot;
-&quot; To go to the previous search results do:
-&quot;   <leader>p
-&quot;
-&quot; map <leader>cc :botright cope<cr>
-&quot; map <leader>n :cn<cr>
-&quot; map <leader>p :cp<cr></p>
+<h3>When you press gv you Ack after the selected text</h3>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Spell checking {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; Pressing ,ss will toggle and untoggle spell checking
-map <eader>ss :setlocal spell!<cr></p>
+<h3>vnoremap <silent> gv :call VisualSelection(&#39;gv&#39;, &#39;&#39;)<CR></h3>
 
-<p>&quot; Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=</p>
+<h3>Open Ack and put the cursor in the right position</h3>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Misc {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>&#39;tzt&#39;m</p>
+<h3>map <leader>g :Ack</h3>
 
-<p>&quot; Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr></p>
+<h3>When you press <leader>r you can search and replace the selected text</h3>
 
-<p>&quot; Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr></p>
+<pre><code>vnoremap &lt;silent&gt; &lt;leader&gt;r :call VisualSelection(&#39;replace&#39;, &#39;&#39;)&lt;CR&gt;
+</code></pre>
 
-<p>augroup filetype_pl
+<h3>Do :help cope if you are unsure what cope is. It&#39;s super useful!</h3>
+
+<p>&quot;</p>
+
+<h3>When you search with Ack, display your results in cope by doing:</h3>
+
+<h3><leader>cc</h3>
+
+<p>&quot;</p>
+
+<h3>To go to the next search result do:</h3>
+
+<h3><leader>n</h3>
+
+<p>&quot;</p>
+
+<h3>To go to the previous search results do:</h3>
+
+<h3><leader>p</h3>
+
+<p>&quot;</p>
+
+<h3>map <leader>cc :botright cope<cr></h3>
+
+<h3>map <leader>n :cn<cr></h3>
+
+<h3>map <leader>p :cp<cr></h3>
+
+<p>}}}</p>
+
+<h3>=&gt; Spell checking {{{</h3>
+
+<h3>Pressing ,ss will toggle and untoggle spell checking</h3>
+
+<pre><code>map &lt;eader&gt;ss :setlocal spell!&lt;cr&gt;
+</code></pre>
+
+<h3>Shortcuts using <leader></h3>
+
+<pre><code>map &lt;leader&gt;sn ]s
+map &lt;leader&gt;sp [s
+map &lt;leader&gt;sa zg
+map &lt;leader&gt;s? z=
+</code></pre>
+
+<p>}}}</p>
+
+<h3>=&gt; Misc {{{</h3>
+
+<h3>Remove the Windows ^M - when the encodings gets messed up</h3>
+
+<pre><code>noremap &lt;Leader&gt;m mmHmt:%s/&lt;C-V&gt;&lt;cr&gt;//ge&lt;cr&gt;&#39;tzt&#39;m
+</code></pre>
+
+<h3>Quickly open a buffer for scribble</h3>
+
+<pre><code>map &lt;leader&gt;q :e ~/buffer&lt;cr&gt;
+</code></pre>
+
+<h3>Toggle paste mode on and off</h3>
+
+<pre><code>map &lt;leader&gt;pp :setlocal paste!&lt;cr&gt;
+
+augroup filetype_pl
   autocmd BufEnter * if &amp;filetype == &quot;perl&quot; | setlocal filetype=prolog | endif
-augroup END</p>
+augroup END
+</code></pre>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Helper functions {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-function! CmdLine(str)
+<p>}}}</p>
+
+<h3>=&gt; Helper functions {{{</h3>
+
+<pre><code>function! CmdLine(str)
     exe &quot;menu Foo.Bar :&quot; . a:str
     emenu Foo.Bar
     unmenu Foo
-endfunction </p>
+endfunction 
 
-<p>function! VisualSelection(direction, extra<em>filter) range
-    let l:saved</em>reg = @&quot;
-    execute &quot;normal! vgvy&quot;</p>
+function! VisualSelection(direction, extra_filter) range
+    let l:saved_reg = @&quot;
+    execute &quot;normal! vgvy&quot;
 
-<pre><code>let l:pattern = escape(@&quot;, &#39;\\/.*$^~[]&#39;)
-let l:pattern = substitute(l:pattern, &quot;\n$&quot;, &quot;&quot;, &quot;&quot;)
+    let l:pattern = escape(@&quot;, &#39;\\/.*$^~[]&#39;)
+    let l:pattern = substitute(l:pattern, &quot;\n$&quot;, , )
 
-if a:direction == &#39;b&#39;
-    execute &quot;normal ?&quot; . l:pattern . &quot;^M&quot;
-elseif a:direction == &#39;gv&#39;
-    call CmdLine(&quot;Ack \&quot;&quot; . l:pattern . &quot;\&quot; &quot; )
-elseif a:direction == &#39;replace&#39;
-    call CmdLine(&quot;%s&quot; . &#39;/&#39;. l:pattern . &#39;/&#39;)
-elseif a:direction == &#39;f&#39;
-    execute &quot;normal /&quot; . l:pattern . &quot;^M&quot;
-endif
+    if a:direction == &#39;b&#39;
+        execute &quot;normal ?&quot; . l:pattern . &quot;^M&quot;
+    elseif a:direction == &#39;gv&#39;
+        call CmdLine(&quot;Ack \ . l:pattern . &quot;\&quot; &quot; )
+    elseif a:direction == &#39;replace&#39;
+        call CmdLine(&quot;%s&quot; . &#39;/&#39;. l:pattern . &#39;/&#39;)
+    elseif a:direction == &#39;f&#39;
+        execute &quot;normal /&quot; . l:pattern . &quot;^M&quot;
+    endif
 
-let @/ = l:pattern
-let @&quot; = l:saved_reg
+    let @/ = l:pattern
+    let @&quot; = l:saved_reg
+endfunction
 </code></pre>
 
-<p>endfunction</p>
+<h3>Returns true if paste mode is enabled</h3>
 
-<p>&quot; Returns true if paste mode is enabled
-function! HasPaste()
+<pre><code>function! HasPaste()
     if &amp;paste
         return &#39;PASTE MODE  &#39;
     en
     return &#39;&#39;
-endfunction</p>
+endfunction
+</code></pre>
 
-<p>&quot; Don&#39;t close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
+<h3>Don&#39;t close window, when deleting a buffer</h3>
+
+<pre><code>command! Bclose call &lt;SID&gt;BufcloseCloseIt()
+function! &lt;SID&gt;BufcloseCloseIt()
    let l:currentBufNum = bufnr(&quot;%&quot;)
-   let l:alternateBufNum = bufnr(&quot;#&quot;)</p>
+   let l:alternateBufNum = bufnr(&quot;#&quot;)
 
-<p>if buflisted(l:alternateBufNum)
+   if buflisted(l:alternateBufNum)
      buffer #
    else
      bnext
-   endif</p>
+   endif
 
-<p>if bufnr(&quot;%&quot;) == l:currentBufNum
+   if bufnr(&quot;%&quot;) == l:currentBufNum
      new
-   endif</p>
+   endif
 
-<p>if buflisted(l:currentBufNum)
+   if buflisted(l:currentBufNum)
      execute(&quot;bdelete! &quot;.l:currentBufNum)
    endif
-endfunction</p>
+endfunction
+</code></pre>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; GitGutter fixes {{{
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-&quot; vim-gitgutter will use Sign Column to set its color, reload it.
-call gitgutter#highlight#define_highlights()</p>
+<p>}}}</p>
 
-<p>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Experimental mappings {{{
-&quot;
-&quot; Inspired by Learn Vimscript the Hard Way
-&quot; http://learnvimscriptthehardway.stevelosh.com
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</p>
+<h3>=&gt; GitGutter fixes {{{</h3>
 
-<p>&quot; Open vimrc in a vertial split
-&quot;==============================================
-:nnoremap <leader>ev :vsplit $MYVIMRC<cr></p>
+<h3>vim-gitgutter will use Sign Column to set its color, reload it.</h3>
 
-<p>&quot; Common typos
-&quot;==============================================
-:iabbrev adn and
-:iabbrev wordl world
-:iabbrev witha with a
-:augroup text_snippets
-:  autocmd FileType mkd :iabbrev <buffer> @
-   \ saru<left><left>ga<right>ja<right>hari@gmc<left>ail.<right>om
-:augroup END</p>
+<pre><code>call gitgutter#highlight#define_highlights()
+</code></pre>
 
-<p>&quot; Text manipulation
-&quot;==============================================
-&quot; Surround text with quotes
-:nnoremap <leader>&quot; viw<esc>a&quot;<esc>hbi&quot;<esc>lel
-:nnoremap <leader>&#39; viw<esc>a&#39;<esc>hbi&#39;<esc>lel
-&quot; :vnoremap <leader>&quot; <code>&lt;i&quot;&lt;esc&gt;</code>&gt;i&quot;<esc>
-&quot; :vnoremap <leader>&#39; <code>&lt;i&#39;&lt;esc&gt;</code>&gt;i&#39;<esc></p>
+<p>}}}</p>
 
-<p>&quot; Navigation
-&quot;==============================================
-:nnoremap H ^
-:nnoremap L $</p>
+<h3>=&gt; Experimental mappings {{{</h3>
 
-<p>&quot; Mode change
-&quot;==============================================
-:inoremap jk <esc>
-:inoremap JK <esc>
-:vnoremap jk <esc></p>
+<p>&quot;</p>
 
-<p>&quot; Flush out muscle memory
-:inoremap <esc> <nop>
-:vnoremap <esc> <nop></p>
+<h3>Inspired by Learn Vimscript the Hard Way</h3>
 
-<p>&quot; Autocmd
-&quot;==============================================
-:augroup code_snippets
-:  autocmd FileType python     :iabbrev <buffer> iff if:<left>
-:  autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
-:augroup END</p>
+<h3>http://learnvimscriptthehardway.stevelosh.com</h3>
 
-<p>:augroup fold_levels
+<h3>Open vimrc in a vertial split</h3>
+
+<p>&quot;==============================================
+    :nnoremap <leader>ev :vsplit $MYVIMRC<cr></p>
+
+<h3>Common typos</h3>
+
+<p>&quot;==============================================
+    :iabbrev adn and
+    :iabbrev wordl world
+    :iabbrev witha with a
+    :augroup text_snippets
+    :  autocmd FileType mkd :iabbrev <buffer> @
+       \ saru<left><left>ga<right>ja<right>hari@gmc<left>ail.<right>om
+    :augroup END</p>
+
+<h3>Text manipulation</h3>
+
+<p>&quot;==============================================</p>
+
+<h3>Surround text with quotes</h3>
+
+<pre><code>:nnoremap &lt;leader&gt;&quot; viw&lt;esc&gt;a&quot;&lt;esc&gt;hbi&quot;&lt;esc&gt;lel
+:nnoremap &lt;leader&gt;&#39; viw&lt;esc&gt;a&#39;&lt;esc&gt;hbi&#39;&lt;esc&gt;lel
+</code></pre>
+
+<h3>:vnoremap <leader>&quot; <code>&lt;i&quot;&lt;esc&gt;</code>&gt;i&quot;<esc></h3>
+
+<h3>:vnoremap <leader>&#39; <code>&lt;i&#39;&lt;esc&gt;</code>&gt;i&#39;<esc></h3>
+
+<h3>Navigation</h3>
+
+<p>&quot;==============================================
+    :nnoremap H ^
+    :nnoremap L $</p>
+
+<h3>Mode change</h3>
+
+<p>&quot;==============================================
+    :inoremap jk <esc>
+    :inoremap JK <esc>
+    :vnoremap jk <esc></p>
+
+<h3>Flush out muscle memory</h3>
+
+<pre><code>:inoremap &lt;esc&gt; &lt;nop&gt;
+:vnoremap &lt;esc&gt; &lt;nop&gt;
+</code></pre>
+
+<h3>Autocmd</h3>
+
+<p>&quot;==============================================
+    :augroup code_snippets
+    :  autocmd FileType python     :iabbrev <buffer> iff if:<left>
+    :  autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
+    :augroup END</p>
+
+<pre><code>:augroup fold_levels
 :  autocmd FileType mkd        setlocal foldlevel=3
-:augroup END</p>
-
-<p>:augroup ruby
-&quot;  Add/Remove focus from tests
-:  autocmd FileType ruby :nnoremap ff :s/\&quot;\sdo/\&quot;\, focus: true do/<enter>:let @/=&quot;&quot;<enter></p>
-
-<p>&quot;  Create pseudo code vars
-:  autocmd FileType ruby :iabbrev <buffer> --- = nil #
-:augroup END</p>
-
-<p>:augroup javascript
-&quot; Add/Remove console.log
-:  autocmd FileType javascript :nnoremap ff oconsole.log(&quot;&quot;);<left><left><left>
-:augroup END</p>
-
-<p>:augroup gitrebase
-  &quot; Fixup during rebase
-:  autocmd FileType gitrebase :nnoremap ff :s/^pick/f/<enter>j
-:augroup END</p>
-
-<p>&quot; Operator pending audocmds
-&quot;--------------------------
-:augroup markdown<em>text
-&quot;  Inside header
-:  autocmd FileType mkd :onoremap <buffer> ih :<c-u>execute
-     \ &quot;normal! ?^[=-]\{3,}$\r:nohlsearch\rkvg</em>&quot;<cr></p>
-
-<p>&quot;  Around header
-:  autocmd FileType mkd :onoremap <buffer> ah :<c-u>execute
-     \ &quot;normal! ?^[=-]\{3,}$\r:nohlsearch\rg_vk0&quot;<cr></p>
-
-<p>&quot; Add link
-:  autocmd FileType mkd :nnoremap fl a<space><a href="">link</a><left>
 :augroup END
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}
-&quot; =&gt; Other Tweaks {{{</p>
 
-<p>&quot; Disable the annoying balloon expression
-set noballooneval
-&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; }}}</p>
+:augroup ruby
+</code></pre>
+
+<h3>Add/Remove focus from tests</h3>
+
+<pre><code>:  autocmd FileType ruby :nnoremap ff :s/\&quot;\sdo/\&quot;\, focus\: true do/&lt;enter&gt;:let @/=&lt;enter&gt;
+</code></pre>
+
+<h3>Create pseudo code vars</h3>
+
+<pre><code>:  autocmd FileType ruby :iabbrev &lt;buffer&gt; --- = nil #
+:augroup END
+
+:augroup javascript
+</code></pre>
+
+<h3>Add/Remove console.log</h3>
+
+<pre><code>:  autocmd FileType javascript :nnoremap ff oconsole.log();&lt;left&gt;&lt;left&gt;&lt;left&gt;
+:augroup END
+
+:augroup gitrebase
+  &quot; Fixup during rebase
+:  autocmd FileType gitrebase :nnoremap ff :s/^pick/f/&lt;enter&gt;j
+:augroup END
+</code></pre>
+
+<h3>Operator pending audocmds</h3>
+
+<p>&quot;--------------------------
+    :augroup markdown_text</p>
+
+<h3>Inside header</h3>
+
+<pre><code>:  autocmd FileType mkd :onoremap &lt;buffer&gt; ih :&lt;c-u&gt;execute
+     \ &quot;normal! ?^[=-]\\{3,}$\r:nohlsearch\rkvg_&quot;&lt;cr&gt;
+</code></pre>
+
+<h3>Around header</h3>
+
+<pre><code>:  autocmd FileType mkd :onoremap &lt;buffer&gt; ah :&lt;c-u&gt;execute
+     \ &quot;normal! ?^[=-]\\{3,}$\r:nohlsearch\rg_vk0&quot;&lt;cr&gt;
+
+  &quot; Add link
+:  autocmd FileType mkd :nnoremap fl a&lt;space&gt;[link]()&lt;left&gt;
+:augroup END
+</code></pre>
+
+<p>}}}</p>
+
+<h3>=&gt; Other Tweaks {{{</h3>
+
+<h3>Disable the annoying balloon expression</h3>
+
+<pre><code>set noballooneval
+</code></pre>
+
+<p>}}}</p>
 </section><footer>  <p>This project is maintained by <a href="https://github.com/sagarjauhari">sagarjauhari</a></p>  <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p></footer>  </div>  <script src="javascripts/scale.fix.js"></script></body></html>
