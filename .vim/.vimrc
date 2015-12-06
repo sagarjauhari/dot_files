@@ -58,21 +58,21 @@ filetype plugin indent on    " required
 " => Plugin Customization {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline
-"--------
+"==============================================
 let g:airline_powerline_fonts = 1
 
 " Automatically display all buffers when there's only one tab open
 let g:airline#extensions#tabline#enabled = 1
 
 " The Silver Searcher (Ag)
-" ------------------------------------------
+"==============================================
 " Bind K to search word under cursor
 nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 " TODO add vmode key to search selected text
 " vnoremap K :Ag `<i"<esc>`>i"<esc>
 
 " CtrlP
-" ------------------------------------------
+"==============================================
 " Set local working directory while searching files
 " r - the nearest ancestor that contains one of these directories or files:
 "      .git .hg .svn .bzr _darcs, and your own root markers defined with the
@@ -101,12 +101,12 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 nnoremap <D-r> :CtrlPMRU<CR>
 
 " Expand Region
-" ------------------------------------------
+"==============================================
 " Expand region in visual mode by repeating 'v'
 vmap v <Plug>(expand_region_expand)
 
 " Scratch
-" ------------------------------------------
+"==============================================
 let g:scratch_horizontal = 0        " Vertical window
 let g:scratch_top = 0               " Rigt side
 let g:scratch_insert_autohide = 0   " Do not hide on leaving insert mode
@@ -114,7 +114,7 @@ let g:scratch_filetype = 'ruby'     " Default filetype for syntax highlight
 let g:scratch_height = 0.3
 
 " NERDTree
-" ------------------------------------------
+"==============================================
 " Open nerd tree automatically
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -136,16 +136,16 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
 nnoremap ;; :NERDTreeFind<cr>
 
 " Vim Template
-" ------------------------------------------
+"==============================================
 " Set folder for global template search
 let g:templates_directory = ['~/dot_files/.vim/templates']
 
 " Plasticboy/markdown
-" ------------------------------------------
+"==============================================
 let g:vim_markdown_folding_disabled=1
 
 " Vim-Slime
-" ------------------------------------------
+"==============================================
 let g:slime_target = "tmux"
 
 " Easier command than C-c C-c
@@ -659,7 +659,7 @@ call gitgutter#highlight#define_highlights()
 :augroup END
 
 " Operator pending audocmds
-"--------------------------
+"==============================================
 :augroup markdown_text
 "  Inside header
 :  autocmd FileType mkd :onoremap <buffer> ih :<c-u>execute
