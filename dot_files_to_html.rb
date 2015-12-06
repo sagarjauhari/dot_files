@@ -27,6 +27,7 @@ class DotFileConvert
   # Converts the vimrc file to markdown so it can be easily converted to HTML
   def vimrc_to_mkd
     repo = Rugged::Repository.new(".")
+
     vim_oid = repo.references["refs/heads/master"].target.tree.
       find{|r| r[:name] == ".vim"}[:oid]
     vimrc_oid = repo.lookup(vim_oid).find{|r| r[:name] == ".vimrc"}[:oid]
@@ -34,8 +35,9 @@ class DotFileConvert
 
     text.
       gsub(/^([^\"])/, '    \0').
-      gsub(/\"\"\"*/, "").
-      gsub(/^\" /, "### ")
+      gsub(/\"\"\"*[ }]*/, "").
+      gsub(/^\" => (.*) {{{/, '## \0').
+      gsub(/\"[ =]/, "")
   end
 
   def section
