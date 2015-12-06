@@ -34,10 +34,15 @@ class DotFileConvert
     text = repo.lookup(vimrc_oid).content
 
     text.
-      gsub(/^([^\"])/, '    \0').
-      gsub(/\"\"\"*[ }]*/, "").
-      gsub(/^\" => (.*) {{{/, '## \0').
-      gsub(/\"[ =]/, "")
+      gsub(/^([^\"])/, '    \0').       # Indent the code
+      gsub(/\"\"\"*[ }]*/, "").         # Remove ending folds
+      gsub(/^\" => (.*) {{{/, '## \0'). # Convert fold starts into heading
+      gsub(/([\w ]*\n)\"==*/m, "### \\0"). # 3rd heading before === lines
+      gsub(/\"==*/, "").                # Remove === lines
+      gsub(/^\" (.*)/, "\n\\0\n").      # Empty lines bef/aft normal text
+      gsub(/^\"\s*/, "").               # Now remove the '" ' prefixes
+      gsub(/\" => /, "").               # Now remove the " => prefixes
+      gsub(/ {{{/, "")                  # Now remove the {{{  prefixes
   end
 
   def section
