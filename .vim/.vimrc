@@ -276,7 +276,7 @@ set ffs=unix,dos,mac
 
 " Default font
 " Install patched powerline font: https://github.com/powerline/fonts
-set guifont=Inconsolata\ for\ Powerline:h14
+set guifont=Inconsolata\ for\ Powerline:h15
 
 " Customize the cursor and selection
 highlight Visual guifg=darkolivegreen4 guibg=black
@@ -374,6 +374,9 @@ nnoremap œ gq}       " This is the <Alt-q> Combination
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
+
+" Allow pressing '.' in visual mode
+vnoremap . :norm.<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
