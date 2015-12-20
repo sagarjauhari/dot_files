@@ -18,6 +18,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'aperezdc/vim-template'
 Plugin 'bling/vim-airline'
 Plugin 'chiedojohn/vim-case-convert'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'godlygeek/tabular'
 Plugin 'jgdavey/vim-blockle'
@@ -45,8 +46,6 @@ Plugin 'yggdroot/indentLine'
 
 " Clojure
 Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-salve'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -199,7 +198,7 @@ endif
 set ruler
 
 " Height of the command bar
-set cmdheight=2
+set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hidden
@@ -292,7 +291,10 @@ set guicursor=
       \sm:block-Cursor-blinkwalt175-blinkoff150-blinkon175
 
 " Change cursor shape between insert and normal mode in iTerm2.app
-if $TERM_PROGRAM =~ "iTerm"
+if exists('$TMUX')
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+elseif $TERM_PROGRAM =~ "iTerm"
     let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
     let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
 endif
