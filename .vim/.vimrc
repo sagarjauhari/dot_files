@@ -35,6 +35,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-expand-region'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people'
@@ -84,10 +85,12 @@ nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 "      when "r" is also present.
 let g:ctrlp_working_path_mode = 'rwa'
 
-" For macvim change CtrP mapping to Cmd + t
+" For macvim change CtrlP mapping to Cmd + t
 " For this, first free the gui mapping in gvimrc
 if has ("gui_macvim")
   let g:ctrlp_map = '<D-t>'
+else
+  let g:ctrlp_map = '<Leader><Space>'
 endif
 
 " List files using git ls-files
