@@ -87,11 +87,11 @@ let g:ctrlp_working_path_mode = 'rwa'
 
 " For macvim change CtrlP mapping to Cmd + t
 " For this, first free the gui mapping in gvimrc
-if has ("gui_macvim")
-  let g:ctrlp_map = '<D-t>'
-else
-  let g:ctrlp_map = '<Leader><Space>'
-endif
+" if has ("gui_macvim")
+"   let g:ctrlp_map = '<D-t>'
+" else
+"   let g:ctrlp_map = '<Leader>t'
+" endif
 
 " List files using git ls-files
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
@@ -100,7 +100,8 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 
 " MRU Mode
-nnoremap <D-r> :CtrlPMRU<CR>
+nnoremap <Leader>m :CtrlPMRU<CR>
+nnoremap <Leader>t :CtrlP<CR>
 
 " Expand Region
 "==============================================
@@ -151,8 +152,8 @@ let g:vim_markdown_folding_disabled=1
 let g:slime_target = "tmux"
 
 " Easier command than C-c C-c
-:nnoremap <leader>t :SlimeSend<cr>
-:vnoremap <leader>t :'<,'>SlimeSend<cr>
+:nnoremap <leader>v :SlimeSend<cr>
+:vnoremap <leader>v :'<,'>SlimeSend<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
@@ -252,6 +253,8 @@ set foldcolumn=1
 " When copying/cutting use the system clipboard
 set clipboard=unnamed
 
+" When pasting, yank back the selection to paste again
+xnoremap p pgvy
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Cursor, Colors and Fonts {{{
@@ -434,6 +437,12 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldlevelstart=0
 augroup END
 
+" Configuration files code folding
+augroup filetype_conf
+    autocmd!
+    autocmd FileType conf setlocal foldmethod=marker
+    autocmd FileType conf setlocal foldlevelstart=0
+augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Status line {{{
@@ -519,7 +528,7 @@ map <leader>s? z=
 " => Misc {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+" noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
 map <leader>q :e ~/buffer<cr>
@@ -613,10 +622,16 @@ call gitgutter#highlight#define_highlights()
 :iabbrev adn and
 :iabbrev wordl world
 :iabbrev witha with a
+
+" Auto expansions
+"==============================================
 :augroup text_snippets
 :  autocmd FileType mkd :iabbrev <buffer> @
    \ saru<left><left>ga<right>ja<right>hari@gmc<left>ail.<right>om
 :augroup END
+
+" Insert current date and time
+:iabbrev <expr> dts strftime("%x %X (%Z)")
 
 " Text manipulation
 "==============================================
@@ -688,5 +703,5 @@ call gitgutter#highlight#define_highlights()
 " => Other Tweaks {{{
 
 " Disable the annoying balloon expression
-set noballooneval
+" set noballooneval
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
