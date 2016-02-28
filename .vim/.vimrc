@@ -1,4 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
@@ -15,8 +14,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'alvan/vim-closetag'
 Plugin 'aperezdc/vim-template'
-Plugin 'bling/vim-airline'
 Plugin 'chiedojohn/vim-case-convert'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'elixir-lang/vim-elixir'
@@ -31,15 +30,20 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'mtth/scratch.vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'raimondi/delimitMate'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-expand-region'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'valloric/youcompleteme'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'wlangstroth/vim-racket'
 Plugin 'wting/rust.vim'
@@ -51,8 +55,23 @@ Plugin 'guns/vim-clojure-static'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
+" => General {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Sets how many lines of history VIM has to remember
+set history=700
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" Map leader and localleader
+:let mapleader = ","
+:let maplocalleader = ","
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Plugin Customization {{{
@@ -61,8 +80,30 @@ filetype plugin indent on    " required
 "==============================================
 let g:airline_powerline_fonts = 1
 
+" Disable whitespace extension
+let g:airline#extensions#whitespace#enabled = 0
+
+
 " Automatically display all buffers when there's only one tab open
 let g:airline#extensions#tabline#enabled = 1
+
+" Use shortform text for modes
+let g:airline_mode_map = {
+    \ '__' : '-',
+    \ 'n'  : 'N',
+    \ 'i'  : 'I',
+    \ 'R'  : 'R',
+    \ 'c'  : 'C',
+    \ 'v'  : 'V',
+    \ 'V'  : 'V',
+    \ '' : 'V',
+    \ 's'  : 'S',
+    \ 'S'  : 'S',
+    \ '' : 'S',
+    \ }
+
+" Defaut Airline theme
+let g:airline_theme = 'bubblegum'
 
 " The Silver Searcher (Ag)
 "==============================================
@@ -155,23 +196,10 @@ let g:slime_target = "tmux"
 :nnoremap <leader>v :SlimeSend<cr>
 :vnoremap <leader>v :'<,'>SlimeSend<cr>
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
-" => General {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Sets how many lines of history VIM has to remember
-set history=700
-
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
-" Map leader and localleader
-:let mapleader = ","
-:let maplocalleader = ","
+" DelimitMate
+"==============================================
+" Do not autocomplete '<' so that vim-closetag can be used
+:let delimitMate_matchpairs = "(:),[:],{:}"
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
@@ -219,23 +247,23 @@ endif
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
 set hlsearch
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -260,7 +288,7 @@ xnoremap p pgvy
 " => Cursor, Colors and Fonts {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 
 colorscheme solarized
 set background=dark
@@ -358,15 +386,15 @@ set si "Smart indent
 set wrap "Wrap lines
 
 " Insert matching closing characters
-"inoremap {      {}<Left>
-inoremap {      {<CR>}<Esc>O
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}<Left>
-inoremap (      ()<Left>
-inoremap (<CR>  (<CR>)<Esc>O
-inoremap ((     (
-inoremap ()     ()<Left>
+" inoremap {      {}<Left>
+" inoremap {      {<CR>}<Esc>O
+" inoremap {<CR>  {<CR>}<Esc>O
+" inoremap {{     {
+" inoremap {}     {}<Left>
+" inoremap (      ()<Left>
+" inoremap (<CR>  (<CR>)<Esc>O
+" inoremap ((     (
+" inoremap ()     ()<Left>
 
 " Highlight the column after 80 chars
 set textwidth=80
@@ -455,6 +483,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 
 
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => Editing mappings {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -490,7 +519,7 @@ endfunc
 " vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
 
 " Open Ack and put the cursor in the right position
-" map <leader>g :Ack 
+" map <leader>g :Ack
 
 " When you press <leader>r you can search and replace the selected text
 vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
@@ -547,7 +576,7 @@ function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
     unmenu Foo
-endfunction 
+endfunction
 
 function! VisualSelection(direction, extra_filter) range
     let l:saved_reg = @"
@@ -650,7 +679,8 @@ call gitgutter#highlight#define_highlights()
 "==============================================
 :inoremap jk <esc>
 :inoremap JK <esc>
-:vnoremap jk <esc>
+" Change escape key otherwise visual selection becomes difficult
+:vnoremap <enter> <esc>
 
 " Flush out muscle memory
 :inoremap <esc> <nop>
@@ -668,12 +698,8 @@ call gitgutter#highlight#define_highlights()
 :augroup END
 
 :augroup ruby
-"  Add/Remove focus from tests
+"  Add/Reve focus from tests
 :  autocmd FileType ruby :nnoremap ff :s/\"\sdo/\"\, focus\: true do/<enter>:let @/=""<enter>
-
-"  Create pseudo code vars
-:  autocmd FileType ruby :iabbrev <buffer> --- = nil #
-:augroup END
 
 :augroup javascript
 " Add/Remove console.log
@@ -704,4 +730,7 @@ call gitgutter#highlight#define_highlights()
 
 " Disable the annoying balloon expression
 " set noballooneval
+
+" Play with timeouts
+set timeoutlen=1000 ttimeoutlen=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
