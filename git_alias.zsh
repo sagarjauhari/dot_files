@@ -7,10 +7,12 @@ alias g='git'
 
 # Branch (b)
 alias gb='git branch'
-## List the last 5 branches ordered by commit date
-alias gbl='git for-each-ref --sort=-committerdate --format="%(refname:short)" refs/heads/ --count 5'
+## List the last 5 unmerged branches ordered by commit date
+alias gbl='git for-each-ref --sort=-committerdate --format="%(refname:short)" refs/heads/ --no-merged develop --count 5 | grep -v "master"'
+alias gbla='git branch -v'
 
 # Commit (c)
+alias ,,='git add . && git commit --message "This is it. The Transmuters :rocket: "'
 alias gcm='git commit --message'
 alias gco='git checkout'
 alias gcod='git checkout develop'
