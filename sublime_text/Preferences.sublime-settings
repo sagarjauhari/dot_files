@@ -1,60 +1,53 @@
 {
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"*.log",
+		"*.cache"
+	],
+	"bold_folder_labels": true,
+	"caret_extra_bottom": 1,
+	"caret_extra_top": 1,
+	"caret_extra_width": 1,
+	"caret_style": "phase",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"find_selected_text": true,
 	"font_face": "Inconsolata",
-	"font_size": 18,
+	"font_size": 17,
+	"highlight_line": false,
 	"ignored_packages":
 	[
 	],
+	"indent_to_bracket": true,
+	"index_exclude_patterns":
+	[
+		"*.log",
+		"*.cache"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"margin": 3,
+	"overlay_scroll_bars": "enabled",
+	"rulers":
+	[
+		80
+	],
+	"save_on_focus_lost": true,
+	"scroll_speed": 1.5,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": false,
-	"vintage_start_in_command_mode": true,
-
-    // Spacing between the gutter and the text
-    "margin": 3,
-
-    // The number of spaces a tab is considered equal to
-    "tab_size": 2,
-		"translate_tabs_to_spaces": true,
-
-    // Adds whitespace up to the first open bracket when indenting. Requires
-    // auto_indent to be enabled.
-    "indent_to_bracket": true,
-
-    // If enabled, will highlight any line with a caret
-    "highlight_line": false,
-
-    // Valid values are "smooth", "phase", "blink" and "solid".
-    "caret_style": "phase",
-    // These settings control the size of the caret
-    "caret_extra_top": 1,
-    "caret_extra_bottom": 1,
-    "caret_extra_width": 1,
-
-    // Additional spacing at the top of each line, in pixels
-    "line_padding_top": 1,
-
-    // Additional spacing at the bottom of each line, in pixels
-    "line_padding_bottom": 1,
-
-    // Bold folder colors
-    "bold_folder_labels": true,
-
-    // Columns in which to display vertical rulers
-    "rulers": [80],
-
-    // Set to true to automatically save files when switching to a different file
-    // or application
-    "save_on_focus_lost": true,
-
-    // Set to 0 to disable smooth scrolling. Set to a value between 0 and 1 to
-    // scroll slower, or set to larger than 1 to scroll faster
-    "scroll_speed": 1.5,
-
-    // These files will still show up in the side bar, but won't be included in
-    // Goto Anything or Find in Files
-    "binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip", "*.log", "*.cache"],
-
-
-    // index_exclude_patterns indicate which files won't be indexed.
-    "index_exclude_patterns": ["*.log", "*.cache"],
+	"vintage_start_in_command_mode": true
 }
