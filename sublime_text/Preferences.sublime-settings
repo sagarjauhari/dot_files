@@ -15,17 +15,27 @@
 		"*.jar",
 		"*.zip",
 		"*.log",
-		"*.cache"
+		"*.cache",
+		"node_modules"
 	],
 	"bold_folder_labels": true,
 	"caret_extra_bottom": 1,
 	"caret_extra_top": 1,
 	"caret_extra_width": 1,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules"
+	],
 	"font_face": "Inconsolata",
-	"font_size": 17,
+	"font_size": 18,
+	"gpu_window_buffer": false,
 	"highlight_line": false,
 	"ignored_packages":
 	[
@@ -34,7 +44,8 @@
 	"index_exclude_patterns":
 	[
 		"*.log",
-		"*.cache"
+		"*.cache",
+		"node_modules"
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
@@ -45,9 +56,12 @@
 		80
 	],
 	"save_on_focus_lost": true,
+	"scala_worksheet_sync_views": true,
 	"scroll_speed": 1.5,
+	"show_panel_on_build": true,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": false,
-	"vintage_start_in_command_mode": true
+	"vintage_start_in_command_mode": true,
+	"vintage_use_clipboard": true
 }

@@ -18,8 +18,11 @@ Plugin 'alvan/vim-closetag'
 Plugin 'aperezdc/vim-template'
 Plugin 'chiedojohn/vim-case-convert'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'darthmall/vim-vue'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'godlygeek/tabular'
+Plugin 'honza/vim-snippets'
+Plugin 'junegunn/limelight.vim'
 Plugin 'jgdavey/vim-blockle'
 Plugin 'jpalardy/vim-slime'
 Plugin 'junegunn/goyo.vim'
@@ -35,6 +38,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'raimondi/delimitMate'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'sirver/ultisnips'
 Plugin 'terryma/vim-expand-region'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'tpope/vim-commentary'
@@ -201,6 +205,16 @@ let g:slime_target = "tmux"
 " Do not autocomplete '<' so that vim-closetag can be used
 :let delimitMate_matchpairs = "(:),[:],{:}"
 
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<down>"
+let g:UltiSnipsJumpBackwardTrigger="<up>"
+
+" Limelight
+"==============================================
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""" }}}
 " => VIM user interface {{{
@@ -698,8 +712,12 @@ call gitgutter#highlight#define_highlights()
 :augroup END
 
 :augroup ruby
-"  Add/Reve focus from tests
+"  Add focus to tests
 :  autocmd FileType ruby :nnoremap ff :s/\"\sdo/\"\, focus\: true do/<enter>:let @/=""<enter>
+
+"  PUTS the caller (http://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html)
+:  autocmd FileType ruby nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
+:augroup END
 
 :augroup javascript
 " Add/Remove console.log

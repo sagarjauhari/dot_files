@@ -1,4 +1,11 @@
 [
+	// All modes
+	// ---------
+	 { "keys": ["shift+super+8"],
+    "command": "insert_date",
+    "args": {"format": "%d-%m-%Y %a"}
+
+  },
     //                            vintage - mode control
 	// ============================================================================
 
@@ -34,7 +41,7 @@
 	},
 
 	// Jump back with 'ctrl+o'
-	{ "keys": ["ctrl+o"], "command": "jump_back",
+	{ "keys": ["ctrl+o"], "command": "next_view_in_stack",
 	  "context":
 	  [
 	    { "key": "setting.command_mode", "operand": true },
@@ -43,7 +50,7 @@
 	},
 
 	// Jump forward with 'ctrl+i'
-	{ "keys": ["ctrl+i"], "command": "jump_forward",
+	{ "keys": ["ctrl+i"], "command": "prev_view_in_stack",
 	  "context":
 	  [
 	    { "key": "setting.command_mode", "operand": true },
@@ -52,7 +59,7 @@
 	},
 
 	// Jump to previous change
-	{ "keys": ["ctrl+O"], "command": "previous_change",
+	{ "keys": ["ctrl+shift+o"], "command": "previous_change",
 	  "context":
 	  [
 	    { "key": "setting.command_mode", "operand": true },
@@ -94,6 +101,26 @@
 	  ]
 	},
 
+	// Select word around cursor
+  { "keys": ["v", "v"],
+    "command": "find_under_expand",
+	  "context":
+	  [
+	    { "key": "setting.command_mode", "operand": true },
+	    { "key": "setting.is_widget", "operand": false }
+	  ]
+	},
+
+
+	// Go to definition
+  { "keys": ["K"],
+    "command": 	"goto_definition",
+	  "context":
+	  [
+	    { "key": "setting.command_mode", "operand": true },
+	    { "key": "setting.is_widget", "operand": false }
+	  ]
+	},
 
 	// Navigate Sidebar
 	// Reveal file in S
