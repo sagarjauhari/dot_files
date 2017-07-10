@@ -6,7 +6,7 @@
 alias g='git'
 
 # Branch (b)
-alias gb='git branch'
+alias gb='git branch --sort=-committerdate'
 ## List the last 5 unmerged branches ordered by commit date
 alias gbl='git for-each-ref --sort=-committerdate --format="%(refname:short)" refs/heads/ --no-merged develop --count 5 | grep -v "master"'
 alias gbla='git branch -v'
@@ -60,7 +60,8 @@ alias gir='git reset'
 
 
 # Working Copy (w)
-alias gws='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
+# alias gws='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
+alias gws='git status --short'
 alias gwS='git status --ignore-submodules=${_git_status_ignore_submodules}'
 alias gwd='git diff --no-ext-diff'
 alias gwr='git reset --soft'
