@@ -11,6 +11,9 @@ alias gb='git branch --sort=-committerdate'
 alias gbl='git for-each-ref --sort=-committerdate --format="%(refname:short)" refs/heads/ --no-merged develop --count 5 | grep -v "master"'
 alias gbla='git branch -v'
 
+# Delete merged branches
+alias gbd='git branch --merged | egrep -v "(^\*|master|release)" | xargs git branch -d'
+
 # Commit (c)
 alias ,,='git add . && git commit --message "This is it. The Transmuters :rocket: "'
 alias gcm='git commit --message'
