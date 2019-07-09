@@ -29,7 +29,7 @@ alias gcP='git cherry-pick --no-commit'
 alias gfm='git pull'
 
 # Log (l)
-alias gl='git --no-pager log --oneline --pretty=format:"%Cred%h%Creset %C(bold blue)%an%Creset %Cgreen%ar%Creset: %s" --graph -10'
+alias gl='git --no-pager log --pretty=format:"%Cred%h%Creset %Cblue%an%Creset %Cgreen%ar%Creset: %s %Cred%d%Creset" --graph -10'
 alias gla='git log --oneline --pretty=format:"%Cred%h%Creset %C(bold blue)%an%Creset %Cgreen%ar%Creset: %s" --graph'
 
 
